@@ -12,6 +12,9 @@ const tailwindConfig: Config = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'gradient-our-client': 'linear-gradient(90deg, #435CFF 0%, #834EFF 100%)',
+      },
       clipPath: {
         largeCircle: "circle(75% at center)",
       },
@@ -113,6 +116,11 @@ const tailwindConfig: Config = {
           background: "linear-gradient(180deg, #FF8E24 9.09%, #FF7729 49.62%)",
           WebkitBackgroundClip: "text",
           WebkitTextFillColor: "transparent",
+        },
+
+        ".gradient-text-our-client": {
+          background: "background: linear-gradient(90deg, #435CFF 0%, #834EFF 100%)",
+          WebkitBackgroundClip: "text",
         },
         ".hero-background-gradient": {
           background: "linear-gradient(112.68deg, #5282FF 0%, #834FF1 100%)",
