@@ -2,11 +2,15 @@ import React from 'react';
 import { BsGlobeCentralSouthAsia } from "react-icons/bs";
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import DotComponent from "@/components/DotComponent/DotComponent";
 
 const OurClients: React.FC = () => {
     return (
-        <div className="w-screen bg-white flex items-center justify-start pl-32">
+        <div className="relative w-screen bg-white flex items-center justify-start pl-32 overflow-hidden">
             {/* Header Section */}
+            <div className="absolute left-0 bottom-8 top-10 mb-2">
+                <DotComponent rows={22} columns={3}/>
+            </div>
             <div className="w-[100%] lg:w-[95%] max-h-auto flex-col items-start mt-10 lg:mt-20 mb-12 ">
                 <div className="flex flex-col ml-20">
                     <div className="flex items-center justify-start gap-4 lg:gap-6 font-primary ">
