@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Root Variables */
+:root {
+    --background: #F6F6F6; /* Default background color */
+    --foreground: #00000099; /* Default text color (60% black) */
+    --font-primary: 'Plus Jakarta Sans', sans-serif; /* Primary font */
+    --font-secondary: 'Poppins', sans-serif; /* Secondary font */
+    --primary-color: #4f46e5; /* Example primary color */
+}
+
+/* Body Styles */
+body {
+    background-color: var(--background); /* Apply background color */
+    color: var(--foreground); /* Apply text color */
+    font-family: var(--font-primary), sans-serif; /* Apply primary font globally */
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Heading Styles */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-secondary), sans-serif; /* Apply secondary font to headings */
+    color: #000000; /* Ensure headings are fully black for contrast */
+}
+
+/* Paragraph Styles */
+p {
+    font-family: var(--font-primary), sans-serif; /* Apply primary font to paragraphs */
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--primary-color); /* Default link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+a:hover {
+    color: #3b82f6; /* Slightly lighter shade on hover */
+}

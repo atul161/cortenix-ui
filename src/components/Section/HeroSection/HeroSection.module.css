@@ -1,0 +1,10 @@
+.button-border {
+  background: linear-gradient(112.68deg, #5282FF 0%, #834FF1 100%);
+}
+
+.rectangle {
+    width: 400px;
+    height: 200px;
+    background-color: green;
+    clip-path: circle(50% at 50% 50%);
+}
