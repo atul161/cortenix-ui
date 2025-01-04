@@ -6,6 +6,8 @@ import HeroSectionMobile from "@/components/Section/HeroSection/HeroSectionMobil
 import { useMediaQuery } from "react-responsive";
 import OurClients from "@/components/Section/OurClients/OurClients";
 import OurClientsMobile from "@/components/Section/OurClients/OurClientsMobile";
+import CuttingEdge from "@/components/Section/CuttingEdge/CuttingEdge";
+import CuttingEdgeMobile from "@/components/Section/CuttingEdge/CuttingEdgeMobile";
 
 export default function Home() {
     // Define media query breakpoints
@@ -33,6 +35,16 @@ export default function Home() {
                         <OurClients/>
                     </div>
                 )}
+                {isMobileOrTablet ? (
+                    <div id="CuttingEdgeMobile" className="relative">
+                        <CuttingEdgeMobile/>
+                    </div>
+                ) : (
+                    <div id="CuttingEdge" className="relative">
+                        <CuttingEdge/>
+                    </div>
+                )}
+
             </main>
         </div>
 

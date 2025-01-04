@@ -1,7 +1,5 @@
 import Image from "next/image";
 import DotComponent from "@/components/DotComponent/DotComponent";
-import styles from "./HeroSection.module.css";
-import TriangleComponent from "@/components/TriangleComponent/TriangleComponent";
 
 export default function HeroSection() {
     return (

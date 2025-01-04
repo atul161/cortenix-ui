@@ -88,10 +88,7 @@ export default function HeaderComponent() {
                                     {item.label}
                                 </Link>
                             ))}
-                            <Link
-                                href="/#get-started"
-                                className="border-[2px] border-blue-600 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-600 hover:text-white transition"
-                            >
+                            <Link href="/#get-started" className="border-[2px] border-blue-600 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-600 hover:text-white transition">
                                 Get Started
                             </Link>
                         </nav>
