@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const OurClients: React.FC = () => {
     return (
-        <div className="w-screen bg-white flex flex-col items-center p-4">
+        <div className="w-[100vw] bg-white flex flex-col items-center p-4 overflow-hidden">
             {/* Header Section */}
             <div className="w-full max-w-4xl flex flex-col items-center mt-6 mb-8">
                 <div className="flex items-center gap-3 font-primary">

@@ -16,7 +16,7 @@ export default function Home() {
     return (
         <div className="min-h-screen bg-gray-100">
             <HeaderComponent/>
-            <main className="container flex flex-col">
+            <main className="container flex flex-col max-w-[100vw] overflow-hidden">
                 {isMobileOrTablet ? (
                     <div id="HeroSectionMobile" className="relative">
                         <HeroSectionMobile/>
