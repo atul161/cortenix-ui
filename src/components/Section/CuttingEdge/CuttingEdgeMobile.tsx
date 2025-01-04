@@ -1,15 +1,28 @@
 import React from "react";
-
 import Image from "next/image";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import {Autoplay, Pagination} from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 
 const CuttingEdgeMobile: React.FC = () => {
     return (
-        <div className="w-[100vw] bg-[#658FFF] py-10 flex flex-col items-center text-center">
+        <div className="relative w-[100vw] bg-[#658FFF] py-10 flex flex-col items-center text-center overflow-hidden">
+            {/* Top-left Shape */}
+            <div
+                className="rotate-[45deg] absolute w-[50vw] h-[50vw] sm:w-[50vw] sm:h-[50vw] md:w-[50vw] md:h-[50vw] -top-[17vh] sm:-top-[17vh] md:-top-[30vh]  -left-[5vw] z-0 overflow-hidden origin-top-left">
+                {/* Outer Most Layer */}
+                <div
+                    className="absolute h-[85%] w-[85%] bg-[#FFFFFF33] origin-bottom-right rounded-md md:rounded-none"></div>
+                {/* Middle Layer */}
+                <div
+                    className="absolute h-[75%] w-[75%] bg-[#E5E5E533] origin-bottom-right rounded-md md:rounded-none"></div>
+                {/* Inner Most Layer */}
+                <div
+                    className="absolute h-[60%] w-[60%] bg-[#CACACA33] origin-bottom-right rounded-md md:rounded-none"></div>
+            </div>
+
             <div className="w-[90%] max-w-[1200px]">
                 {/* Title Section */}
                 <div className="mb-6">
@@ -38,49 +51,57 @@ const CuttingEdgeMobile: React.FC = () => {
                 <div className="w-full">
                     <Swiper
                         modules={[Autoplay]}
-                        autoplay={{ delay: 3000, disableOnInteraction: false }}
+                        autoplay={{delay: 3000, disableOnInteraction: false}}
                         spaceBetween={20}
                         slidesPerView={1.2}
                         breakpoints={{
-                            640: { slidesPerView: 2.2 },
-                            1024: { slidesPerView: 3.5 },
+                            640: {slidesPerView: 2.2},
+                            1024: {slidesPerView: 3.5},
                         }}
                         className="py-4"
                     >
-                        {[{
-                            title: "Open AI",
-                            content: "O1, GPT4, ChatGPT, DALL-E, Whisper",
-                            src: "/Images/Tech/Chatgpt.png",
-                            alt: "Open AI Logo"
-                        }, {
-                            title: "Claude",
-                            content: "Claude 3 Opus, Claude 3.5 Sonnet",
-                            src: "/Images/Tech/Claude.png",
-                            alt: "Claude Logo"
-                        }, {
-                            title: "AWS Bedrock",
-                            content: "Cohere, Mistral AI, Stability AI",
-                            src: "/Images/Tech/Aws.png",
-                            alt: "AWS Bedrock Logo"
-                        }, {
-                            title: "Google Vertex.AI",
-                            content: "Gemini, Bert, Med PaLM",
-                            src: "/Images/Tech/Vertex.png",
-                            alt: "Google Vertex.AI Logo"
-                        }, {
-                            title: "Meta",
-                            content: "MetaAI, LLaMA 3.1, SAM 2",
-                            src: "/Images/Tech/Meta.png",
-                            alt: "Meta Logo"
-                        }, {
-                            title: "Azure",
-                            content: "Open AI, AI Search, AI Speech Analytics",
-                            src: "/Images/Tech/Azure.png",
-                            alt: "Azure Logo"
-                        }].map((item, index) => (
+                        {[
+                            {
+                                title: "Open AI",
+                                content: "O1, GPT4, ChatGPT, DALL-E, Whisper",
+                                src: "/Images/Tech/Chatgpt.png",
+                                alt: "Open AI Logo",
+                            },
+                            {
+                                title: "Claude",
+                                content: "Claude 3 Opus, Claude 3.5 Sonnet",
+                                src: "/Images/Tech/Claude.png",
+                                alt: "Claude Logo",
+                            },
+                            {
+                                title: "AWS Bedrock",
+                                content: "Cohere, Mistral AI, Stability AI",
+                                src: "/Images/Tech/Aws.png",
+                                alt: "AWS Bedrock Logo",
+                            },
+                            {
+                                title: "Google Vertex.AI",
+                                content: "Gemini, Bert, Med PaLM",
+                                src: "/Images/Tech/Vertex.png",
+                                alt: "Google Vertex.AI Logo",
+                            },
+                            {
+                                title: "Meta",
+                                content: "MetaAI, LLaMA 3.1, SAM 2",
+                                src: "/Images/Tech/Meta.png",
+                                alt: "Meta Logo",
+                            },
+                            {
+                                title: "Azure",
+                                content: "Open AI, AI Search, AI Speech Analytics",
+                                src: "/Images/Tech/Azure.png",
+                                alt: "Azure Logo",
+                            },
+                        ].map((item, index) => (
                             <SwiperSlide key={index}>
-                                <div className="flex flex-col items-center bg-white rounded-lg p-4 shadow-lg border-2 border-[#D1DDFF] hover:shadow-xl hover:border-blue-500 transition">
-                                    <Image src={item.src} alt={item.alt} width={50} height={50} />
+                                <div
+                                    className="flex flex-col items-center bg-white rounded-lg p-4 shadow-lg border-2 border-[#D1DDFF] hover:shadow-xl hover:border-blue-500 transition">
+                                    <Image src={item.src} alt={item.alt} width={50} height={50}/>
                                     <h3 className="font-primary font-bold text-[#A845FF] text-[18px] mt-3">
                                         {item.title}
                                     </h3>
@@ -93,6 +114,22 @@ const CuttingEdgeMobile: React.FC = () => {
                     </Swiper>
                 </div>
             </div>
+
+            {/* Bottom-right Shape */}
+            {/* Bottom-right Shape */}
+            <div
+                className="rotate-[135deg] -right-[80vw] -bottom-[30vh] sm:-right-[80vw] sm:-bottom-[30vh] md:-right-[92vw] md:-bottom-[38vh] absolute w-[50vw] h-[50vw] sm:w-[40vw] sm:h-[40vw] md:w-[50vw] md:h-[50vw] z-0 overflow-visible origin-top-left">
+                {/* Outer Most Layer */}
+                <div
+                    className="absolute h-[85%] w-[85%] bg-[#FFFFFF33] origin-bottom-right rounded-md md:rounded-none"></div>
+                {/* Middle Layer */}
+                <div
+                    className="absolute h-[75%] w-[75%] bg-[#E5E5E533] origin-bottom-right rounded-md md:rounded-none"></div>
+                {/* Inner Most Layer */}
+                <div
+                    className="absolute h-[60%] w-[60%] bg-[#CACACA33] origin-bottom-right rounded-md md:rounded-none"></div>
+            </div>
+
         </div>
     );
 };
