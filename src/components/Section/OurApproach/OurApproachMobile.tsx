@@ -7,7 +7,7 @@ import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import {Autoplay, Pagination} from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 
 interface CardData {
     src: string;
@@ -145,7 +145,7 @@ const OurApproachMobile: React.FC = () => {
                         href="/#get-started"
                         className="border-2 border-blue-600 text-blue-600 px-6 py-2 rounded-md hover:bg-blue-600 hover:text-white transition duration-300"
                     >
-                        Let's Partner Up
+                        Let&apos;s Partner Up
                     </Link>
                 </div>
             </div>

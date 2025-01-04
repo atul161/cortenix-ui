@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
 
 interface DotComponentProps {
     rows: number;
@@ -15,16 +15,33 @@ const DotComponent: React.FC<DotComponentProps> = ({
                                                        columns,
                                                        dotSize = { mobile: 2, tablet: 4, desktop: 6 },
                                                        gap = { mobile: 2, tablet: 4, desktop: 6 },
-                                                       containerHeight = 'auto',
-                                                       containerWidth = 'auto',
-                                                       dotColor = 'linear-gradient(112.68deg, #D3DAE7 0%, #D3DAE7 100%)', // Default gradient color
+                                                       containerHeight = "auto",
+                                                       containerWidth = "auto",
+                                                       dotColor = "linear-gradient(112.68deg, #D3DAE7 0%, #D3DAE7 100%)", // Default gradient color
                                                    }) => {
-    // Determine the current screen size
-    const screenSize = typeof window !== 'undefined' && window.innerWidth < 640
-        ? 'mobile'
-        : window.innerWidth < 1024
-            ? 'tablet'
-            : 'desktop';
+    const [screenSize, setScreenSize] = useState<"mobile" | "tablet" | "desktop">("desktop");
+
+    useEffect(() => {
+        const updateScreenSize = () => {
+            const width = window.innerWidth;
+            if (width < 640) {
+                setScreenSize("mobile");
+            } else if (width < 1024) {
+                setScreenSize("tablet");
+            } else {
+                setScreenSize("desktop");
+            }
+        };
+
+        // Set initial screen size
+        updateScreenSize();
+
+        // Add event listener for window resize
+        window.addEventListener("resize", updateScreenSize);
+
+        // Clean up event listener on component unmount
+        return () => window.removeEventListener("resize", updateScreenSize);
+    }, []);
 
     return (
         <div
@@ -35,8 +52,8 @@ const DotComponent: React.FC<DotComponentProps> = ({
                 gap: `${gap[screenSize]}px`,
                 maxHeight: containerHeight,
                 maxWidth: containerWidth,
-                justifyContent: 'center',
-                alignItems: 'center',
+                justifyContent: "center",
+                alignItems: "center",
             }}
         >
             {Array.from({ length: rows * columns }).map((_, index) => (

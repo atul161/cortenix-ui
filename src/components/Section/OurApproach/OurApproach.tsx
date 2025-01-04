@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Pentagon from "@/components/PentagonComponent/Pentagon";
@@ -65,7 +65,7 @@ const cards: CardData[] = [
             },
             {
                 heading: "Business Alignment",
-                content: " Ensuring the AI solutions are fully integrated with your objectives and deliver real-world value.",
+                content: "Ensuring the AI solutions are fully integrated with your objectives and deliver real-world value.",
             },
         ],
     },
@@ -106,17 +106,19 @@ const OurApproach: React.FC = () => {
     }, []);
 
     return (
-        <div className="relative w-screen bg-[#F6F6F6] flex flex-col items-center justify-center overflow-hidden py-16"
-             onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
-
+        <div
+            className="relative w-screen bg-[#F6F6F6] flex flex-col items-center justify-center overflow-hidden py-16"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+        >
             <div className="absolute bottom-72 right-0">
-                <DotComponent rows={12} columns={7}/>
+                <DotComponent rows={12} columns={7} />
             </div>
             <h2 className="font-primary font-normal text-[32px] md:text-[40px] mb-12 text-gray-800">
                 Our <span className="font-bold text-blue-600">Approach</span>
             </h2>
 
-            <div className=" mt-6 flex flex-wrap gap-8 justify-center">
+            <div className="mt-6 flex flex-wrap gap-8 justify-center">
                 {cards.map((card, index) => (
                     <motion.div
                         key={index}
@@ -127,14 +129,13 @@ const OurApproach: React.FC = () => {
                     >
                         {/* Pentagon */}
                         <div className="absolute -top-3 left-6">
-                            <Pentagon label={`0${index + 1}`}/>
+                            <Pentagon label={`0${index + 1}`} />
                         </div>
 
                         <div className="flex flex-col items-center justify-center w-full h-full p-6">
                             {/* Image and Title */}
                             <div className="group flex flex-col items-center gap-2">
-                                <div
-                                    className="flex flex-col items-center gap-2 transition-opacity duration-300 group-hover:opacity-0 group-hover:hidden">
+                                <div className="flex flex-col items-center gap-2 transition-opacity duration-300 group-hover:opacity-0 group-hover:hidden">
                                     <Image
                                         src={card.src}
                                         alt={`Image representing ${card.title}`}
@@ -179,15 +180,15 @@ const OurApproach: React.FC = () => {
                 >
                     <p className="text-[18px] font-secondary leading-relaxed">
                         Our iterative approach ensures your <span className="text-[#FF782A]">AI agents</span> evolve
-                        alongside your business, delivering <span
-                        className="text-[#FF782A]">sustained results</span> and
-                        <span className="text-[#FF782A]"> long-term value</span>.
+                        alongside your business, delivering{" "}
+                        <span className="text-[#FF782A]">sustained results</span> and{" "}
+                        <span className="text-[#FF782A]">long-term value</span>.
                     </p>
                     <Link
                         href="/#get-started"
                         className="border-2 border-blue-600 text-blue-600 px-6 py-2 rounded-md hover:bg-blue-600 hover:text-white transition duration-300 ease-in-out"
                     >
-                        Let's Partner Up
+                        Let&apos;s Partner Up
                     </Link>
                 </div>
 
@@ -204,10 +205,6 @@ const OurApproach: React.FC = () => {
                     />
                 </div>
             </div>
-
-
-
-
         </div>
     );
 };

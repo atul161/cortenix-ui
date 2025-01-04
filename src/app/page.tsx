@@ -12,8 +12,8 @@ import OurApproach from "@/components/Section/OurApproach/OurApproach";
 import OurApproachMobile from "@/components/Section/OurApproach/OurApproachMobile";
 
 export default function Home() {
-    // Define media query breakpoints
-    const isMobileOrTablet = useMediaQuery({ query: "(max-width: 900px)" });
+  // Define media query breakpoints
+  const isMobileOrTablet = useMediaQuery({ query: "(max-width: 900px)" });
 
     return (
         <div className="min-h-screen bg-gray-100">
@@ -56,6 +56,7 @@ export default function Home() {
                         <CuttingEdge/>
                     </div>
                 )}
+                {/*<GenAI/>*/}
 
             </main>
         </div>
