@@ -9,6 +9,7 @@ import OurClientsMobile from "@/components/Section/OurClients/OurClientsMobile";
 import CuttingEdge from "@/components/Section/CuttingEdge/CuttingEdge";
 import CuttingEdgeMobile from "@/components/Section/CuttingEdge/CuttingEdgeMobile";
 import OurApproach from "@/components/Section/OurApproach/OurApproach";
+import OurApproachMobile from "@/components/Section/OurApproach/OurApproachMobile";
 
 export default function Home() {
     // Define media query breakpoints
@@ -36,7 +37,16 @@ export default function Home() {
                         <OurClients/>
                     </div>
                 )}
-                <OurApproach/>
+                {isMobileOrTablet ? (
+                    <div id="OurApproachSmallerScreens" className="relative">
+                        <OurApproachMobile/>
+                    </div>
+                ) : (
+                    <div id="OurApproach" className="relative">
+                        <OurApproach/>
+                    </div>
+                )}
+
                 {isMobileOrTablet ? (
                     <div id="CuttingEdgeMobile" className="relative">
                         <CuttingEdgeMobile/>
