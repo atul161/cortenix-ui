@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, {useEffect, useRef, useState} from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Pentagon from "@/components/PentagonComponent/Pentagon";
+import Link from "next/link";
+import DotComponent from "@/components/DotComponent/DotComponent";
 
 interface CardData {
     src: string;
@@ -90,17 +92,31 @@ const cards: CardData[] = [
 
 const OurApproach: React.FC = () => {
     const [isHovered, setIsHovered] = useState(false);
+    const xchildRef = useRef<HTMLDivElement>(null);
+    const xchild2ImageRef = useRef<HTMLImageElement>(null);
+
+    useEffect(() => {
+        if (xchildRef.current && xchild2ImageRef.current) {
+            const xchildHeight = xchildRef.current.offsetHeight;
+
+            // Set both height and width to make the image square
+            xchild2ImageRef.current.style.height = `${xchildHeight}px`;
+            xchild2ImageRef.current.style.width = `${xchildHeight}px`;
+        }
+    }, []);
 
     return (
-        <div
-            className="relative w-screen bg-[#F6F6F6] flex flex-col items-center justify-center overflow-hidden py-16"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-        >
+        <div className="relative w-screen bg-[#F6F6F6] flex flex-col items-center justify-center overflow-hidden py-16"
+             onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+
+            <div className="absolute bottom-72 right-0">
+                <DotComponent rows={12} columns={7}/>
+            </div>
             <h2 className="font-primary font-normal text-[32px] md:text-[40px] mb-12 text-gray-800">
                 Our <span className="font-bold text-blue-600">Approach</span>
             </h2>
-            <div className="flex flex-wrap gap-8 justify-center">
+
+            <div className=" mt-6 flex flex-wrap gap-8 justify-center">
                 {cards.map((card, index) => (
                     <motion.div
                         key={index}
@@ -111,13 +127,14 @@ const OurApproach: React.FC = () => {
                     >
                         {/* Pentagon */}
                         <div className="absolute -top-3 left-6">
-                            <Pentagon label={`0${index + 1}`} />
+                            <Pentagon label={`0${index + 1}`}/>
                         </div>
 
                         <div className="flex flex-col items-center justify-center w-full h-full p-6">
                             {/* Image and Title */}
                             <div className="group flex flex-col items-center gap-2">
-                                <div className="flex flex-col items-center gap-2 transition-opacity duration-300 group-hover:opacity-0 group-hover:hidden">
+                                <div
+                                    className="flex flex-col items-center gap-2 transition-opacity duration-300 group-hover:opacity-0 group-hover:hidden">
                                     <Image
                                         src={card.src}
                                         alt={`Image representing ${card.title}`}
@@ -152,6 +169,45 @@ const OurApproach: React.FC = () => {
                     </motion.div>
                 ))}
             </div>
+
+            <div className="w-[60%] rounded-lg flex flex-row justify-start items-start p-6 mt-8">
+                {/* Left Section */}
+                <div
+                    id="xchild"
+                    ref={xchildRef}
+                    className="flex flex-col justify-between items-start space-y-4 bg-opacity-40 backdrop-blur-md max-w-[65%] p-4 bg-white shadow-lg"
+                >
+                    <p className="text-[18px] font-secondary leading-relaxed">
+                        Our iterative approach ensures your <span className="text-[#FF782A]">AI agents</span> evolve
+                        alongside your business, delivering <span
+                        className="text-[#FF782A]">sustained results</span> and
+                        <span className="text-[#FF782A]"> long-term value</span>.
+                    </p>
+                    <Link
+                        href="/#get-started"
+                        className="border-2 border-blue-600 text-blue-600 px-6 py-2 rounded-md hover:bg-blue-600 hover:text-white transition duration-300 ease-in-out"
+                    >
+                        Let's Partner Up
+                    </Link>
+                </div>
+
+                {/* Right Section */}
+                <div className="ml-8" id="xchild2">
+                    <Image
+                        src="/Images/Approach/AI.png"
+                        alt="AI image"
+                        width={100}
+                        height={0}
+                        quality={100}
+                        className="object-cover"
+                        ref={xchild2ImageRef}
+                    />
+                </div>
+            </div>
+
+
+
+
         </div>
     );
 };
