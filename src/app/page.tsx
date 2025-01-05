@@ -10,7 +10,9 @@ import CuttingEdge from "@/components/Section/CuttingEdge/CuttingEdge";
 import CuttingEdgeMobile from "@/components/Section/CuttingEdge/CuttingEdgeMobile";
 import OurApproach from "@/components/Section/OurApproach/OurApproach";
 import OurApproachMobile from "@/components/Section/OurApproach/OurApproachMobile";
-import HappyCustomer from "@/components/Section/HappyCustomers/HappyCustomers";
+import GenAI from "@/components/Section/GenAI/GenAI";
+import WhyChooseUs from "@/components/Section/WhyChooseUs/WhyChooseUs";
+import VisionaryTeam from "@/components/VisionaryTeam";
 
 export default function Home() {
   // Define media query breakpoints
@@ -58,7 +60,9 @@ export default function Home() {
                     </div>
                 )}
                 {/*<GenAI/>*/}
-                <HappyCustomer/>
+                <GenAI />
+                <WhyChooseUs />
+                <VisionaryTeam />
 
             </main>
         </div>
