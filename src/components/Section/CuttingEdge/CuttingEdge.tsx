@@ -5,7 +5,6 @@ import TriangleComponent from "@/components/TriangleComponent/TriangleComponent"
 import { AiFillCaretLeft, AiFillCaretRight } from "react-icons/ai";
 import Image from "next/image";
 import Link from "next/link";
-import DotComponent from "@/components/DotComponent/DotComponent";
 
 const CuttingEdge: React.FC = () => {
     return (

@@ -1,12 +1,11 @@
-"use client"
+"use client";
 import { motion } from "framer-motion";
 import DotComponent from "@/components/DotComponent/DotComponent";
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
-type Props = {};
-
-const WhyChooseUs = (props: Props) => {
+const WhyChooseUs = () => {
   const items = [
     { title: "Deep Expertise in AI" },
     { title: "Proven Track Record" },
@@ -31,7 +30,7 @@ const WhyChooseUs = (props: Props) => {
             <div className="flex md:justify-between justify-center mt-16 flex-wrap">
               <p className="flex text-start text-lg text-gray-600 max-w-2xl">
                 Creating exceptional vertical AI agents requires a unique blend of
-                skills and experience. Here's why we are your ideal partner:
+                skills and experience. Here&apos;s why we are your ideal partner:
               </p>
               <Link href="/contact">
                 <button className="border-2 border-blue-500 text-blue-500 font-semibold text-lg px-8 py-4 font-primary transition-transform transform hover:scale-105">
@@ -79,7 +78,13 @@ const WhyChooseUs = (props: Props) => {
                 whileInView={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 1 }}
             >
-              <img src="Images/people.png" alt="Why Choose Us" />
+              <Image
+                  src="/Images/people.png"
+                  alt="Why Choose Us"
+                  width={500}
+                  height={400}
+                  priority
+              />
             </motion.div>
           </motion.div>
         </div>

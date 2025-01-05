@@ -3,8 +3,8 @@ import DownArrow from "@/components/DownArrow";
 import Link from "next/link";
 import React from "react";
 
-type Props = {};
-const GenAI = (props: Props) => {
+
+const GenAI = () => {
     const items = [
         {
             title: "Generative AI Solutions",

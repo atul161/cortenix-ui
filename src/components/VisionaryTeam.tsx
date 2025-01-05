@@ -1,12 +1,11 @@
-"use client"
+"use client";
 import React from "react";
 import TriangleComponent from "./TriangleComponent/TriangleComponent";
 import { AiFillCaretLeft, AiFillCaretRight } from "react-icons/ai";
 import DotComponent from "./DotComponent/DotComponent";
+import Image from "next/image"; // Importing Image component
 
-type Props = {};
-
-const VisionaryTeam = (props: Props) => {
+const VisionaryTeam = () => {
   const PERSONS = [
     {
       name: "Vinamra Pandiya",
@@ -53,10 +52,12 @@ const VisionaryTeam = (props: Props) => {
               >
                 <div className="relative">
                   <div className="w-full absolute -top-24 flex justify-center items-center">
-                    <img
-                        src="Images/profile.png"
-                        alt=""
-                        className="w-48 h-48 rounded-full"
+                    <Image
+                        src="/Images/profile.png" // Replace with the correct path
+                        alt={`${name}'s profile`}
+                        width={192} // Adjust width based on requirements
+                        height={192} // Adjust height based on requirements
+                        className="rounded-full"
                     />
                   </div>
                   <div className="text-white text-sm px-2 pt-24 rounded-lg">
