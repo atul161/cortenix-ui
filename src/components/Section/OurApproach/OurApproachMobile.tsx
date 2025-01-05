@@ -88,8 +88,8 @@ const cards: CardData[] = [
 
 const OurApproachMobile: React.FC = () => {
   return (
-      <div className="bg-[#F6F6F6] py-12 px-4 flex flex-col items-center">
-        <h2 className="font-primary font-normal text-[28px] mb-8 text-gray-800 text-center">
+      <div className="bg-[#F6F6F6] pb-12 px-4 flex flex-col items-center mt-16 ">
+        <h2 className="font-primary font-normal text-[32px] mb-8 text-gray-800 text-center">
           Our <span className="font-bold text-blue-600">Approach</span>
         </h2>
 

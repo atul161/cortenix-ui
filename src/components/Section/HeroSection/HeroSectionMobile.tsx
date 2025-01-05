@@ -29,7 +29,7 @@ const buttonAnimation = {
 
 export default function HeroSectionMobile() {
     return (
-        <section className="relative max-h-[620px]" id="home">
+        <section className="relative max-h-screen" id="home">
             <div className="w-[100vw] h-auto flex flex-col hero-background-gradient z-10">
                 {/* Text Section */}
                 <motion.div

@@ -11,12 +11,12 @@ const OurClientsMobile: React.FC = () => {
     const clients = ["Reddy.png", "IndianGovernment.png", "Eris.jpeg", "Merck.jpeg"];
 
     return (
-        <div className="w-[100vw] bg-white flex flex-col items-center p-12 overflow-hidden">
+        <div className="w-[100vw] bg-white flex flex-col items-center p-12 overflow-hidden mt-16">
             {/* Header Section */}
             <div className="w-full max-w-4xl flex flex-col items-center mt-6 mb-8">
                 <div className="flex items-center gap-3 font-primary">
                     <BsGlobeCentralSouthAsia
-                        className="text-[#435CFF] h-10 w-10"
+                        className="text-[#435CFF] h-8 w-8 "
                         style={{
                             background: "linear-gradient(90deg, #435CFF 0%, #834EFF 100%)",
                             WebkitBackgroundClip: "text",
@@ -24,7 +24,7 @@ const OurClientsMobile: React.FC = () => {
                         }}
                     />
                     <h2
-                        className="text-2xl md:text-3xl font-bold text-[#435CFF] font-primary"
+                        className="text-[32px] md:text-3xl font-bold text-[#435CFF] font-primary"
                         style={{
                             background: "linear-gradient(90deg, #435CFF 0%, #834EFF 100%)",
                             WebkitBackgroundClip: "text",

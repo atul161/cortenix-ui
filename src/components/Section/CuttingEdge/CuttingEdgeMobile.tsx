@@ -11,7 +11,7 @@ import { Autoplay } from "swiper/modules";
 const CuttingEdgeMobile: React.FC = () => {
     return (
         <motion.div
-            className="relative w-[100vw] bg-[#658FFF] py-10 flex flex-col items-center text-center overflow-hidden"
+            className="relative w-[100vw] bg-[#658FFF] pb-10 pt-10 mt-4 flex flex-col items-center text-center overflow-hidden"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, amount: 0.3 }}

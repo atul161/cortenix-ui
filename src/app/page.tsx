@@ -15,6 +15,7 @@ import GenAI from "@/components/Section/GenAI/GenAI";
 import WhyChooseUs from "@/components/Section/WhyChooseUs/WhyChooseUs";
 import VisionaryTeam from "@/components/VisionaryTeam";
 import Footer from "@/components/Section/Footer/Footer";
+import HappyCustomer from "@/components/Section/HappyCustomers/HappyCustomers";
 
 export default function Home() {
     const [isClient, setIsClient] = useState(false);
@@ -73,6 +74,7 @@ export default function Home() {
                 <GenAI />
                 <WhyChooseUs />
                 <VisionaryTeam />
+                <HappyCustomer/>
                 <Footer/>
             </main>
         </div>
