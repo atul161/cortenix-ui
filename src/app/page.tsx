@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import HeaderComponent from "@/components/Header/HeaderComponent";
+import HeaderComponent from "@/components/Section/Header/HeaderComponent";
 import HeroSection from "@/components/Section/HeroSection/HeroSection";
 import HeroSectionMobile from "@/components/Section/HeroSection/HeroSectionMobile";
 import { useMediaQuery } from "react-responsive";
@@ -14,6 +14,7 @@ import OurApproachMobile from "@/components/Section/OurApproach/OurApproachMobil
 import GenAI from "@/components/Section/GenAI/GenAI";
 import WhyChooseUs from "@/components/Section/WhyChooseUs/WhyChooseUs";
 import VisionaryTeam from "@/components/VisionaryTeam";
+import Footer from "@/components/Section/Footer/Footer";
 
 export default function Home() {
     const [isClient, setIsClient] = useState(false);
@@ -72,6 +73,7 @@ export default function Home() {
                 <GenAI />
                 <WhyChooseUs />
                 <VisionaryTeam />
+                <Footer/>
             </main>
         </div>
     );

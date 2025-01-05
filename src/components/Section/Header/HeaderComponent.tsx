@@ -57,7 +57,7 @@ export default function HeaderComponent() {
             <header className="bg-white shadow-md sticky top-0 z-50">
                 <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 flex justify-between items-center py-4">
                     <div className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-[#6DB6FF] to-[#0074E9] text-transparent bg-clip-text font-primary">
-                        <Link href="/">Cortenix</Link>
+                        <Link href="/public">Cortenix</Link>
                     </div>
 
                     <nav className="hidden lg:flex space-x-4 xl:space-x-6">

@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import ContactForm from "@/components/ContactForm/ContactForm";
-import HeaderComponent from "@/components/Header/HeaderComponent";
+import HeaderComponent from "@/components/Section/Header/HeaderComponent";
 import Image from "next/image";
 
 const imageAnimation = {
