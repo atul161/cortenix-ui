@@ -46,7 +46,7 @@ export default function HeroSection() {
                             <br />
                             Transforming Enterprises
                         </motion.h1>
-                        <motion.p className="text-lg mb-8" variants={textItem}>
+                        <motion.p className="text-lg mb-8 pr-6" variants={textItem}>
                             Technology is evolving rapidly. Enterprises are moving beyond traditional SaaS to
                             embrace Vertical AI Agents, tailored to solve industry-specific challenges and unlock
                             growth. At Cortinex, we lead this transformation, empowering businesses to harness
