@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useState } from "react";
 
 interface DotComponentProps {
@@ -10,6 +11,7 @@ interface DotComponentProps {
     dotColor?: string; // Allow customizing dot color
 }
 
+
 const DotComponent: React.FC<DotComponentProps> = ({
                                                        rows,
                                                        columns,
@@ -17,11 +19,14 @@ const DotComponent: React.FC<DotComponentProps> = ({
                                                        gap = { mobile: 2, tablet: 4, desktop: 6 },
                                                        containerHeight = "auto",
                                                        containerWidth = "auto",
-                                                       dotColor = "linear-gradient(112.68deg, #D3DAE7 0%, #D3DAE7 100%)", // Default gradient color
+                                                       dotColor = "linear-gradient(112.68deg, #D3DAE7 0%, #D3DAE7 100%)",
                                                    }) => {
     const [screenSize, setScreenSize] = useState<"mobile" | "tablet" | "desktop">("desktop");
+    const [hydrated, setHydrated] = useState(false);
 
     useEffect(() => {
+        if (typeof window === "undefined") return;
+
         const updateScreenSize = () => {
             const width = window.innerWidth;
             if (width < 640) {
@@ -35,6 +40,7 @@ const DotComponent: React.FC<DotComponentProps> = ({
 
         // Set initial screen size
         updateScreenSize();
+        setHydrated(true); // Mark as hydrated after determining screen size
 
         // Add event listener for window resize
         window.addEventListener("resize", updateScreenSize);
@@ -43,13 +49,20 @@ const DotComponent: React.FC<DotComponentProps> = ({
         return () => window.removeEventListener("resize", updateScreenSize);
     }, []);
 
+    // Default to "desktop" styles during SSR
+    const effectiveScreenSize = hydrated ? screenSize : "desktop";
+
     return (
         <div
             className="grid"
             style={{
-                gridTemplateColumns: `repeat(${columns}, ${dotSize[screenSize] + gap[screenSize]}px)`,
-                gridTemplateRows: `repeat(${rows}, ${dotSize[screenSize] + gap[screenSize]}px)`,
-                gap: `${gap[screenSize]}px`,
+                gridTemplateColumns: `repeat(${columns}, ${
+                    dotSize[effectiveScreenSize] + gap[effectiveScreenSize]
+                }px)`,
+                gridTemplateRows: `repeat(${rows}, ${
+                    dotSize[effectiveScreenSize] + gap[effectiveScreenSize]
+                }px)`,
+                gap: `${gap[effectiveScreenSize]}px`,
                 maxHeight: containerHeight,
                 maxWidth: containerWidth,
                 justifyContent: "center",
@@ -61,14 +74,15 @@ const DotComponent: React.FC<DotComponentProps> = ({
                     key={index}
                     className="rounded-full"
                     style={{
-                        width: `${dotSize[screenSize]}px`,
-                        height: `${dotSize[screenSize]}px`,
-                        background: dotColor, // Apply gradient as background
+                        width: `${dotSize[effectiveScreenSize]}px`,
+                        height: `${dotSize[effectiveScreenSize]}px`,
+                        background: dotColor,
                     }}
                 ></div>
             ))}
         </div>
     );
 };
+
 
 export default DotComponent;

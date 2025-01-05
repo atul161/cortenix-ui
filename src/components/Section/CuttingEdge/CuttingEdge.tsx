@@ -1,4 +1,6 @@
+"use client"
 import React from "react";
+import { motion } from "framer-motion";
 import TriangleComponent from "@/components/TriangleComponent/TriangleComponent";
 import { AiFillCaretLeft, AiFillCaretRight } from "react-icons/ai";
 import Image from "next/image";
@@ -7,25 +9,27 @@ import DotComponent from "@/components/DotComponent/DotComponent";
 
 const CuttingEdge: React.FC = () => {
     return (
-        <div
+        <motion.div
             className="relative h-auto w-[100vw] bg-[#658FFF] flex items-center justify-center transition-all duration-500 overflow-hidden"
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
         >
-            <div
-                className="absolute w-[200px] h-[200px] sm:w-[300px] sm:h-[300px] md:w-[400px] md:h-[400px] -top-[130px] sm:-top-[190px] md:-top-[260px] left-0 z-0 overflow-hidden rotate-45 origin-top-left"
-            >
-                <div
-                    className="absolute h-[175px] w-[175px] sm:h-[250px] sm:w-[250px] md:h-[350px] md:w-[350px] bg-[#FFFFFF33] origin-top-left rounded-md md:rounded-none"
-                ></div>
-                <div
-                    className="absolute h-[150px] w-[150px] sm:h-[200px] sm:w-[200px] md:h-[300px] md:w-[300px] bg-[#E5E5E533] origin-top-left rounded-md md:rounded-none"
-                ></div>
-                <div
-                    className="absolute h-[125px] w-[125px] sm:h-[150px] sm:w-[150px] md:h-[250px] md:w-[250px] bg-[#CACACA33] origin-top-left rounded-md md:rounded-none"
-                ></div>
+            <div className="absolute w-[200px] h-[200px] sm:w-[300px] sm:h-[300px] md:w-[400px] md:h-[400px] -top-[130px] sm:-top-[190px] md:-top-[260px] left-0 z-0 overflow-hidden rotate-45 origin-top-left">
+                <div className="absolute h-[175px] w-[175px] sm:h-[250px] sm:w-[250px] md:h-[350px] md:w-[350px] bg-[#FFFFFF33] origin-top-left rounded-md md:rounded-none"></div>
+                <div className="absolute h-[150px] w-[150px] sm:h-[200px] sm:w-[200px] md:h-[300px] md:w-[300px] bg-[#E5E5E533] origin-top-left rounded-md md:rounded-none"></div>
+                <div className="absolute h-[125px] w-[125px] sm:h-[150px] sm:w-[150px] md:h-[250px] md:w-[250px] bg-[#CACACA33] origin-top-left rounded-md md:rounded-none"></div>
             </div>
 
             <div className="w-[90%] mx-auto h-auto max-h-full flex flex-col items-center justify-center">
-                <div className="pt-16 px-4">
+                <motion.div
+                    className="pt-16 px-4"
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+                >
                     <div className="flex flex-col md:flex-row items-center justify-between gap-6 mb-8">
                         <div className="flex items-center">
                             <TriangleComponent
@@ -45,7 +49,7 @@ const CuttingEdge: React.FC = () => {
                             />
                         </div>
                     </div>
-                </div>
+                </motion.div>
                 <div className="px-4 flex flex-col">
                     <div className="flex flex-col items-center justify-between gap-5 mb-8 md:flex-row">
                         <p className="text-center font-normal font-secondary text-[14px] sm:text-[16px] md:text-[18px] text-white sm:text-left">
@@ -119,23 +123,7 @@ const CuttingEdge: React.FC = () => {
                     </div>
                 </div>
             </div>
-
-            <div
-                className="rotate-[135deg] absolute w-[20vw] h-[20vw] sm:w-[25vw] sm:h-[25vw] md:w-[30vw] md:h-[30vw] -bottom-[60vh] -right-[50vw] md:-bottom-[60vh] md:-right-[50vw] lg:-right-[50vw] lg:-bottom-[60vh] xl:-right-[48vw] xl:-bottom-[60vh] 2xl:-right-[50vw] 2xl:-bottom-[75vh]  z-0 overflow-hidden origin-top-left"
-            >
-                <div className="absolute h-[85%] w-[85%] bg-[#FFFFFF33] origin-bottom-right rounded-md md:rounded-none"></div>
-                <div className="absolute h-[75%] w-[75%] bg-[#E5E5E533] origin-bottom-right rounded-md md:rounded-none"></div>
-                <div className="absolute h-[60%] w-[60%] bg-[#CACACA33] origin-bottom-right rounded-md md:rounded-none"></div>
-            </div>
-
-            <div className="absolute bottom-0 left-0">
-                <DotComponent rows={4} columns={4} />
-            </div>
-
-            <div className="absolute top-0 right-0">
-                <DotComponent rows={4} columns={4} />
-            </div>
-        </div>
+        </motion.div>
     );
 };
 

@@ -1,10 +1,11 @@
+"use client";
 import Image from "next/image";
 import DotComponent from "@/components/DotComponent/DotComponent";
 import Link from "next/link";
 
 export default function HeroSectionMobile() {
     return (
-        <section className="relative max-h-[620px] " id="home">
+        <section className="relative max-h-[620px]" id="home">
             <div className="w-[100vw] h-auto flex flex-col hero-background-gradient z-10">
                 {/* Text Section */}
                 <div className="relative w-full px-6 py-8 flex flex-col items-center text-center z-10">
@@ -29,7 +30,7 @@ export default function HeroSectionMobile() {
 
                 {/* Decorative Elements */}
                 <div className="relative w-full flex justify-center mt-4">
-                    <DotComponent rows={3} columns={4} />
+                    {typeof window !== "undefined" && <DotComponent rows={3} columns={4} />}
                     <div className="absolute w-[100px] h-[100px] sm:w-[150px] sm:h-[150px] -top-12 left-6 z-0 overflow-hidden rotate-45 origin-top-left">
                         <div
                             className="absolute h-[75px] w-[75px] sm:h-[100px] sm:w-[100px] bg-[#FFFFFF33] origin-top-left rounded-md"></div>

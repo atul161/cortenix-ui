@@ -1,3 +1,4 @@
+"use client"
 import DownArrow from "@/components/DownArrow";
 import Link from "next/link";
 import React from "react";

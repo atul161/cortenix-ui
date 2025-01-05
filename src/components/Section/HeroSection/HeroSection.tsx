@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import DotComponent from "@/components/DotComponent/DotComponent";
 import Link from "next/link";

@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 
 // No need for the Props type if it's not used

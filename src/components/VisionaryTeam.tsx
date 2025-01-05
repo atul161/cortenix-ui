@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import TriangleComponent from "./TriangleComponent/TriangleComponent";
 import { AiFillCaretLeft, AiFillCaretRight } from "react-icons/ai";
