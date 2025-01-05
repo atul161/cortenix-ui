@@ -11,16 +11,20 @@ const CuttingEdgeMobile: React.FC = () => {
         <div className="relative w-[100vw] bg-[#658FFF] py-10 flex flex-col items-center text-center overflow-hidden">
             {/* Top-left Shape */}
             <div
-                className="rotate-[45deg] absolute w-[50vw] h-[50vw] sm:w-[50vw] sm:h-[50vw] md:w-[50vw] md:h-[50vw] -top-[17vh] sm:-top-[17vh] md:-top-[30vh]  -left-[5vw] z-0 overflow-hidden origin-top-left">
+                className="rotate-[45deg] absolute w-[50vw] h-[50vw] sm:w-[50vw] sm:h-[50vw] md:w-[50vw] md:h-[50vw] -top-[17vh] sm:-top-[17vh] md:-top-[30vh]  -left-[5vw] z-0 overflow-hidden origin-top-left"
+            >
                 {/* Outer Most Layer */}
                 <div
-                    className="absolute h-[85%] w-[85%] bg-[#FFFFFF33] origin-bottom-right rounded-md md:rounded-none"></div>
+                    className="absolute h-[85%] w-[85%] bg-[#FFFFFF33] origin-bottom-right rounded-md md:rounded-none"
+                ></div>
                 {/* Middle Layer */}
                 <div
-                    className="absolute h-[75%] w-[75%] bg-[#E5E5E533] origin-bottom-right rounded-md md:rounded-none"></div>
+                    className="absolute h-[75%] w-[75%] bg-[#E5E5E533] origin-bottom-right rounded-md md:rounded-none"
+                ></div>
                 {/* Inner Most Layer */}
                 <div
-                    className="absolute h-[60%] w-[60%] bg-[#CACACA33] origin-bottom-right rounded-md md:rounded-none"></div>
+                    className="absolute h-[60%] w-[60%] bg-[#CACACA33] origin-bottom-right rounded-md md:rounded-none"
+                ></div>
             </div>
 
             <div className="w-[90%] max-w-[1200px]">
@@ -40,7 +44,7 @@ const CuttingEdgeMobile: React.FC = () => {
                         </span>
                     </p>
                     <Link
-                        href="/#get-started"
+                        href="/contact"
                         className="inline-block px-6 py-2 bg-white text-blue-600 font-medium rounded-md shadow-md transition hover:bg-blue-600 hover:text-white"
                     >
                         Get In Touch
@@ -51,12 +55,12 @@ const CuttingEdgeMobile: React.FC = () => {
                 <div className="w-full">
                     <Swiper
                         modules={[Autoplay]}
-                        autoplay={{delay: 3000, disableOnInteraction: false}}
+                        autoplay={{ delay: 3000, disableOnInteraction: false }}
                         spaceBetween={20}
                         slidesPerView={1.2}
                         breakpoints={{
-                            640: {slidesPerView: 2.2},
-                            1024: {slidesPerView: 3.5},
+                            640: { slidesPerView: 2.2 },
+                            1024: { slidesPerView: 3.5 },
                         }}
                         className="py-4"
                     >
@@ -100,8 +104,9 @@ const CuttingEdgeMobile: React.FC = () => {
                         ].map((item, index) => (
                             <SwiperSlide key={index}>
                                 <div
-                                    className="flex flex-col items-center bg-white rounded-lg p-4 shadow-lg border-2 border-[#D1DDFF] hover:shadow-xl hover:border-blue-500 transition">
-                                    <Image src={item.src} alt={item.alt} width={50} height={50}/>
+                                    className="flex flex-col items-center bg-white rounded-lg p-4 shadow-lg border-2 border-[#D1DDFF] hover:shadow-xl hover:border-blue-500 transition"
+                                >
+                                    <Image src={item.src} alt={item.alt} width={50} height={50} />
                                     <h3 className="font-primary font-bold text-[#A845FF] text-[18px] mt-3">
                                         {item.title}
                                     </h3>
@@ -116,20 +121,22 @@ const CuttingEdgeMobile: React.FC = () => {
             </div>
 
             {/* Bottom-right Shape */}
-            {/* Bottom-right Shape */}
             <div
-                className="rotate-[135deg] -right-[80vw] -bottom-[30vh] sm:-right-[80vw] sm:-bottom-[30vh] md:-right-[92vw] md:-bottom-[38vh] absolute w-[50vw] h-[50vw] sm:w-[40vw] sm:h-[40vw] md:w-[50vw] md:h-[50vw] z-0 overflow-visible origin-top-left">
+                className="rotate-[135deg] -right-[80vw] -bottom-[30vh] sm:-right-[80vw] sm:-bottom-[30vh] md:-right-[92vw] md:-bottom-[38vh] absolute w-[50vw] h-[50vw] sm:w-[40vw] sm:h-[40vw] md:w-[50vw] md:h-[50vw] z-0 overflow-visible origin-top-left"
+            >
                 {/* Outer Most Layer */}
                 <div
-                    className="absolute h-[85%] w-[85%] bg-[#FFFFFF33] origin-bottom-right rounded-md md:rounded-none"></div>
+                    className="absolute h-[85%] w-[85%] bg-[#FFFFFF33] origin-bottom-right rounded-md md:rounded-none"
+                ></div>
                 {/* Middle Layer */}
                 <div
-                    className="absolute h-[75%] w-[75%] bg-[#E5E5E533] origin-bottom-right rounded-md md:rounded-none"></div>
+                    className="absolute h-[75%] w-[75%] bg-[#E5E5E533] origin-bottom-right rounded-md md:rounded-none"
+                ></div>
                 {/* Inner Most Layer */}
                 <div
-                    className="absolute h-[60%] w-[60%] bg-[#CACACA33] origin-bottom-right rounded-md md:rounded-none"></div>
+                    className="absolute h-[60%] w-[60%] bg-[#CACACA33] origin-bottom-right rounded-md md:rounded-none"
+                ></div>
             </div>
-
         </div>
     );
 };

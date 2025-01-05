@@ -1,9 +1,10 @@
 import Image from "next/image";
 import DotComponent from "@/components/DotComponent/DotComponent";
+import Link from "next/link";
 
 export default function HeroSectionMobile() {
     return (
-        <section className="relative max-h-[620px] ">
+        <section className="relative max-h-[620px] " id="home">
             <div className="w-[100vw] h-auto flex flex-col hero-background-gradient z-10">
                 {/* Text Section */}
                 <div className="relative w-full px-6 py-8 flex flex-col items-center text-center z-10">
@@ -18,10 +19,12 @@ export default function HeroSectionMobile() {
                         growth. At Cortinex, we lead this transformation, empowering businesses to harness
                         AI’s full potential.
                     </p>
-                    <button
-                        className="bg-white text-blue-500 font-bold py-2 px-4 sm:py-3 sm:px-6 shadow-lg hover:bg-gray-200 font-primary text-[20px] sm:text-[24px] border-[#D1DDFF] border-4">
-                        Join The AI Revolution
-                    </button>
+                    <Link href="/contact">
+                        <button
+                            className="bg-white text-blue-500 font-bold py-2 px-4 sm:py-3 sm:px-6 shadow-lg hover:bg-gray-200 font-primary text-[20px] sm:text-[24px] border-[#D1DDFF] border-4">
+                            Join The AI Revolution
+                        </button>
+                    </Link>
                 </div>
 
                 {/* Decorative Elements */}

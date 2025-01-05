@@ -65,8 +65,12 @@ const ContactForm = () => {
             setTimeout(() => {
                 setSuccess(null);
             }, 3000);
-        } catch (err: any) {
-            setError(err.message || "Something went wrong");
+        } catch (err) {
+            if (err instanceof Error) {
+                setError(err.message || "Something went wrong");
+            } else {
+                setError("An unknown error occurred");
+            }
         } finally {
             setLoading(false);
         }
@@ -136,7 +140,7 @@ const ContactForm = () => {
                     {/* Submit Button */}
                     <button
                         type="submit"
-                        className="w-full bg-gradient-to-b from-[#FF8E24] to-[#FF7729] font-primary text-white py-3 rounded-lg font-semibold hover:bg-orange-600 transition   duration-300 text-xl"
+                        className="w-full bg-gradient-to-b from-[#FF8E24] to-[#FF7729] font-primary text-white py-3 rounded-lg font-semibold hover:bg-orange-600 transition duration-300 text-xl"
                         disabled={loading}
                     >
                         {loading ? "Submitting..." : "Submit"}
