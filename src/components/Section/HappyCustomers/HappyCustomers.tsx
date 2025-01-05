@@ -96,7 +96,7 @@ const HappyCustomer: React.FC = () => {
             fill
             className="object-cover z-10"
           />
-          <div className="absolute -top-20 -left-20 ">
+          <div className="absolute md:-top-16 md:-left-16 -top-2 -left-2">
             <DotComponent
               rows={12}
               columns={12}
