@@ -72,7 +72,7 @@ const OurClients: React.FC = () => {
                                 src: "/Images/IndianGovernment.png",
                                 alt: "Government of India",
                             },
-                            { src: "/Images/Eris.png", alt: "Eris" },
+                            { src: "/Images/Eris.jpeg", alt: "Eris" },
                             { src: "/Images/Merck.png", alt: "Merck" },
                         ].map((client, index) => (
                             <motion.div

@@ -3,10 +3,15 @@ import React from "react";
 import { BsGlobeCentralSouthAsia } from "react-icons/bs";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
 
-const OurClients: React.FC = () => {
+const OurClientsMobile: React.FC = () => {
+    const clients = ["Reddy.png", "IndianGovernment.png", "Eris.jpeg", "Merck.jpeg"];
+
     return (
-        <div className="w-[100vw] bg-white flex flex-col items-center p-6 overflow-hidden">
+        <div className="w-[100vw] bg-white flex flex-col items-center p-12 overflow-hidden">
             {/* Header Section */}
             <div className="w-full max-w-4xl flex flex-col items-center mt-6 mb-8">
                 <div className="flex items-center gap-3 font-primary">
@@ -34,27 +39,39 @@ const OurClients: React.FC = () => {
                 </p>
             </div>
 
-            {/* Client Logos Section */}
-            <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 mt-4">
-                {["Reddy", "IndianGovernment", "Eris", "Merck"].map((client, index) => (
-                    <motion.div
-                        key={index}
-                        className="relative bg-gradient-to-br from-[#f5f7fa] to-[#c3cfe2] shadow-lg rounded-xl flex items-center justify-center w-full h-24 md:h-32 overflow-hidden"
-                        whileHover={{ scale: 1.05, boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)" }}
-                        transition={{ duration: 0.3 }}
-                    >
-                        <div className="absolute inset-0 bg-white opacity-10 blur-md" />
-                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-50 animate-shimmer" />
-                        <Image
-                            src={`/Images/${client}.png`}
-                            alt={client}
-                            width={120}
-                            height={60}
-                            className="object-contain z-10"
-                        />
-                    </motion.div>
+            {/* Client Logos Section with Swiper */}
+            <Swiper
+                spaceBetween={20}
+                slidesPerView={1}
+                autoplay={{
+                    delay: 3000,
+                    disableOnInteraction: true,
+                }}
+                modules={[Autoplay]}
+                className="w-full max-w-md p-2 h-48 md:h-52"
+            >
+                {clients.map((client, index) => (
+                    <SwiperSlide key={index}>
+                        <motion.div className="relative bg-white shadow-md rounded-xl flex items-center justify-center w-[95%] h-44 md:h-48 overflow-hidden  m-2
+                        "
+                            whileHover={{
+                                scale: 1.05,
+                                boxShadow: "0px 10px 15px rgba(0, 0, 0, 0.1)",
+                            }}
+                            transition={{ duration: 1 }}
+                        >
+
+                            <Image
+                                src={`/Images/${client}`}
+                                alt={client}
+                                width={150}
+                                height={80}
+                                className="object-contain z-10"
+                            />
+                        </motion.div>
+                    </SwiperSlide>
                 ))}
-            </div>
+            </Swiper>
 
             {/* Subtle Gradient at the Bottom */}
             <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent pointer-events-none" />
@@ -62,4 +79,4 @@ const OurClients: React.FC = () => {
     );
 };
 
-export default OurClients;
+export default OurClientsMobile;
