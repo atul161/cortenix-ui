@@ -10,6 +10,7 @@ import CuttingEdge from "@/components/Section/CuttingEdge/CuttingEdge";
 import CuttingEdgeMobile from "@/components/Section/CuttingEdge/CuttingEdgeMobile";
 import OurApproach from "@/components/Section/OurApproach/OurApproach";
 import OurApproachMobile from "@/components/Section/OurApproach/OurApproachMobile";
+import HappyCustomer from "@/components/Section/HappyCustomers/HappyCustomers";
 
 export default function Home() {
   // Define media query breakpoints
@@ -57,6 +58,7 @@ export default function Home() {
                     </div>
                 )}
                 {/*<GenAI/>*/}
+                <HappyCustomer/>
 
             </main>
         </div>
