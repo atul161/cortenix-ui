@@ -6,11 +6,11 @@ import DotComponent from "@/components/DotComponent/DotComponent";
 
 const HappyCustomer: React.FC = () => {
   return (
-    <div className="w-[100vw] h-[130vh] sm:w-[100vw] sm:h-[110vh] bg-gray-200 flex items-center justify-center">
+    <div className="w-[100vw] h-[130vh] sm:w-[100vw] sm:h-[110vh] bg-gray-200 flex  justify-start items-start sm:flex sm:items-center sm:justify-center">
       {/* Centered container */}
-      <div className="h-[80%] w-[95%] md:w-[90%] flex flex-col md:flex-row items-center justify-center">
+      <div className="h-screen sm:h-[80%] w-[95%] md:w-[90%] flex flex-col md:flex-row items-center justify-center">
         {/* Left Section */}
-        <div className="h-full w-full md:w-[50%] lg:w-[45%] flex flex-col items-start justify-start p-4 md:p-6">
+        <div className="h-full w-full md:w-[50%] lg:w-[45%] flex flex-col items-start justify-start p-8 mt-10  sm:p-4 md:p-6">
           <div className="font-primary text-[30px] sm:text-[30px] md:text-[30px] lg:text-[44px] text-black">
             <span className="font-bold text-[#365EFF]">Happy</span> Customers
           </div>
@@ -89,7 +89,7 @@ const HappyCustomer: React.FC = () => {
         </div>
 
         {/* Right Section */}
-        <div className="h-[80%] w-[90%] sm:h-[80%] md:h-[80%] md:mb-28 xl:h-[80%] xl:mb-24 2xl:h-[80%] 2xl:mb-20 md:w-[50%] lg:w-[45%] bg-green-200 flex items-start justify-start relative">
+        <div className="h-[50%] w-[90%] sm:h-[80%] md:h-[80%] md:mb-28 xl:h-[80%] xl:mb-24 2xl:h-[80%] 2xl:mb-20 md:w-[50%] lg:w-[45%] bg-green-200 flex items-start justify-start relative">
           <Image
             src="/Images/HappyCustomer/HappyCustomer1.jpeg"
             alt="Description"

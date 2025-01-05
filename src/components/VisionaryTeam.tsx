@@ -25,26 +25,29 @@ const VisionaryTeam = () => {
   ];
 
   return (
-    <div
-      className="flex flex-col items-center md:px-24 md:py-32 py-20 px-12 relative bg-[#F6F6F6]"
+    <div className="flex flex-col items-center md:px-24 md:py-32 sm:py-20 py-16 px-12 relative bg-[#F6F6F6]"
       id="team"
     >
-      <div className="text-4xl flex flex-wrap gap-10">
-        <TriangleComponent
-          count={5}
-          iconClassName="text-[18px] sm:text-[20px] md:text-[24px] text-white"
-          Icon={<AiFillCaretRight color="#FF8E24" />}
-        />
-        <div>
+      <div className="flex items-center justify-start sm:text-4xl sm:flex sm:flex-wrap gap-4 sm:gap-10">
+        <div className="hidden sm:visible">
+          <TriangleComponent
+              count={5}
+              iconClassName="text-[18px] sm:text-[20px] md:text-[24px] text-white"
+              Icon={<AiFillCaretRight color="#FF8E24" />}
+          />
+        </div>
+        <div className="text-[32px] md:text-[40px]">
           Our <span className="font-extrabold">Visionary</span> Team
         </div>
-        <TriangleComponent
-          count={5}
-          iconClassName="text-[18px] sm:text-[20px] md:text-[24px] text-white"
-          Icon={<AiFillCaretLeft color="#FF8E24" />}
-        />
+        <div className="hidden sm:visible">
+          <TriangleComponent
+              count={5}
+              iconClassName="text-[18px] sm:text-[20px] md:text-[24px] text-white"
+              Icon={<AiFillCaretLeft color="#FF8E24" />}
+          />
+        </div>
       </div>
-      <div className="flex mt-40 gap-32 flex-wrap">
+      <div className="flex mt-32 sm:mt-40 gap-32 sm:gap-32 flex-wrap">
         {PERSONS.map(({ description, name }, index) => (
           <div
             key={index} // Adding the unique key for each child
@@ -67,7 +70,7 @@ const VisionaryTeam = () => {
             <div className="text-center py-4 px-6">
               <h2 className="text-xl font-semibold text-purple-600">{name}</h2>
               <p className="text-sm text-gray-500 italic">Detail</p>
-              <p className="text-[#00000099] mt-2">{description}</p>
+              <p className="text-[#00000099] mt-2 text-[14px] sm:text-[16px] md:text-[16px]">{description}</p>
             </div>
           </div>
         ))}
@@ -75,7 +78,7 @@ const VisionaryTeam = () => {
       <div className="absolute left-0 bottom-0 mb-2">
         <DotComponent rows={6} columns={6} />
       </div>
-      <div className="absolute top-8 right-8 mb-2">
+      <div className="absolute top-8 right-8 mb-2 sm:h-[32px] sm:w-[216px] h-[10px] w-[200px]" >
         <svg
           width="216"
           height="32"
