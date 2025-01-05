@@ -16,67 +16,69 @@ import WhyChooseUs from "@/components/Section/WhyChooseUs/WhyChooseUs";
 import VisionaryTeam from "@/components/VisionaryTeam";
 import Footer from "@/components/Section/Footer/Footer";
 import HappyCustomer from "@/components/Section/HappyCustomers/HappyCustomers";
+import OurServices from "@/components/Section/OurServices/OurServices";
 
 export default function Home() {
-    const [isClient, setIsClient] = useState(false);
+  const [isClient, setIsClient] = useState(false);
 
-    useEffect(() => {
-        // Ensure the component is mounted before using the media query
-        setIsClient(true);
-    }, []);
+  useEffect(() => {
+    // Ensure the component is mounted before using the media query
+    setIsClient(true);
+  }, []);
 
-    const isMobileOrTablet = useMediaQuery({ query: "(max-width: 900px)" });
+  const isMobileOrTablet = useMediaQuery({ query: "(max-width: 900px)" });
 
-    return (
-        <div className="min-h-screen bg-gray-100">
-            <HeaderComponent />
-            <main className="container flex flex-col max-w-[100vw] overflow-hidden">
-                {isClient &&
-                    (isMobileOrTablet ? (
-                        <div id="HeroSectionMobile" className="relative">
-                            <HeroSectionMobile />
-                        </div>
-                    ) : (
-                        <div id="HeroSection" className="relative">
-                            <HeroSection />
-                        </div>
-                    ))}
-                {isClient &&
-                    (isMobileOrTablet ? (
-                        <div id="OurClientsMobile" className="relative">
-                            <OurClientsMobile />
-                        </div>
-                    ) : (
-                        <div id="OurClients" className="relative">
-                            <OurClients />
-                        </div>
-                    ))}
-                {isClient &&
-                    (isMobileOrTablet ? (
-                        <div id="OurApproachSmallerScreens" className="relative">
-                            <OurApproachMobile />
-                        </div>
-                    ) : (
-                        <div id="OurApproach" className="relative">
-                            <OurApproach />
-                        </div>
-                    ))}
-                {isClient &&
-                    (isMobileOrTablet ? (
-                        <div id="CuttingEdgeMobile" className="relative">
-                            <CuttingEdgeMobile />
-                        </div>
-                    ) : (
-                        <div id="CuttingEdge" className="relative">
-                            <CuttingEdge />
-                        </div>
-                    ))}
-                <GenAI />
-                <WhyChooseUs />
-                <VisionaryTeam />
-                <HappyCustomer/>
-                <Footer/>
-            </main>
-        </div>
-    );
+  return (
+    <div className="min-h-screen bg-gray-100">
+      <HeaderComponent />
+      <main className="container flex flex-col max-w-[100vw] overflow-hidden">
+        {isClient &&
+          (isMobileOrTablet ? (
+            <div id="HeroSectionMobile" className="relative">
+              <HeroSectionMobile />
+            </div>
+          ) : (
+            <div id="HeroSection" className="relative">
+              <HeroSection />
+            </div>
+          ))}
+        {isClient &&
+          (isMobileOrTablet ? (
+            <div id="OurClientsMobile" className="relative">
+              <OurClientsMobile />
+            </div>
+          ) : (
+            <div id="OurClients" className="relative">
+              <OurClients />
+            </div>
+          ))}
+        {isClient &&
+          (isMobileOrTablet ? (
+            <div id="OurApproachSmallerScreens" className="relative">
+              <OurApproachMobile />
+            </div>
+          ) : (
+            <div id="OurApproach" className="relative">
+              <OurApproach />
+            </div>
+          ))}
+        {isClient &&
+          (isMobileOrTablet ? (
+            <div id="CuttingEdgeMobile" className="relative">
+              <CuttingEdgeMobile />
+            </div>
+          ) : (
+            <div id="CuttingEdge" className="relative">
+              <CuttingEdge />
+            </div>
+          ))}
+        <GenAI />
+        <WhyChooseUs />
+        <VisionaryTeam />
+        <HappyCustomer />
+        <OurServices />
+        <Footer />
+      </main>
+    </div>
+  );
 }
