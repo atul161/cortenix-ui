@@ -26,7 +26,7 @@ const VisionaryTeam = () => {
 
   return (
     <div
-      className="flex flex-col items-center md:px-24 md:py-32 py-20 px-12 relative bg-[#F6F6F6] gap-14"
+      className="flex flex-col items-center md:px-24 md:py-32 py-20 px-12 relative bg-[#F6F6F6]"
       id="team"
     >
       <div className="text-4xl flex flex-wrap gap-10">
@@ -44,7 +44,7 @@ const VisionaryTeam = () => {
           Icon={<AiFillCaretLeft color="#FF8E24" />}
         />
       </div>
-      <div className="flex mt-[160] gap-32 flex-wrap">
+      <div className="flex mt-40 gap-32 flex-wrap">
         {PERSONS.map(({ description, name }, index) => (
           <div
             key={index} // Adding the unique key for each child
