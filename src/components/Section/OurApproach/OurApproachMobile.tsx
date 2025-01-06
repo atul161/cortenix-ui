@@ -144,7 +144,7 @@ const OurApproachMobile: React.FC = () => {
                 ))}
             </Swiper>
 
-            <div className="bg-white shadow-lg rounded-lg p-6 mt-8 w-full">
+            <div className="bg-white shadow-lg rounded-lg p-6 mt-8 w-full z-10">
                 <p className="text-[16px] font-secondary text-gray-700 leading-relaxed text-center">
                     Our iterative approach ensures your{" "}
                     <span className="text-[#FF782A]">AI agents</span> evolve alongside
@@ -160,6 +160,18 @@ const OurApproachMobile: React.FC = () => {
                         Let&apos;s Partner Up
                     </Link>
                 </div>
+            </div>
+
+            <div className="absolute bottom-0 left-0  z-0">
+                <div
+                    className={`border-[20px] border-l-0 border-b-0`}
+                    style={{
+                        borderRadius: "0 80% 0 0",
+                        height: 150,
+                        width: 150,
+                        borderColor: "#727CF690",
+                    }}
+                />
             </div>
         </div>
     );

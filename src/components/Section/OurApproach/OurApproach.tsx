@@ -182,7 +182,7 @@ const OurApproach: React.FC = () => {
                 ))}
             </div>
 
-            <div className="w-[60%] rounded-lg flex flex-row justify-start items-start p-6 mt-8">
+            <div className="w-[60%] rounded-lg flex flex-row justify-start items-start p-6 mt-8 z-10">
                 {/* Left Section */}
                 <div
                     id="xchild"
@@ -218,13 +218,13 @@ const OurApproach: React.FC = () => {
                     />
                 </div>
             </div>
-            <div className="absolute bottom-0 left-0  ">
+            <div className="absolute bottom-0 left-0  z-0">
                 <div
-                    className={`border-[30px] border-l-0 border-b-0`}
+                    className={`border-[25px] border-l-0 border-b-0`}
                     style={{
                         borderRadius: "0 100% 0 0",
-                        height: 350,
-                        width: 350,
+                        height: 370,
+                        width: 370,
                         borderColor: "#727CF690",
                     }}
                 />

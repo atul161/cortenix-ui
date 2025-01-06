@@ -48,7 +48,7 @@ export default function HeroSection() {
                                 background: 'linear-gradient(180deg, #FF8E24 9.09%, #FF7729 49.62%)',
                                 WebkitBackgroundClip: 'text',
                                 color: 'transparent',
-                                textShadow: '3px 3px 0px rgba(0, 0, 0, 0.25)',
+                                textShadow: '3px 3px 3px rgba(0, 0, 0, 0.10)',
                             }}
                         >
   SaaS to AI

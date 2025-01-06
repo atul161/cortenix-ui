@@ -46,7 +46,7 @@ export default function HeroSectionMobile() {
                         style={{
                             fontWeight: 'bold',
                             color: '#FF7729',
-                            textShadow: '3px 3px 0px rgba(0, 0, 0, 0.25)',
+                            textShadow: '3px 3px 3px rgba(0, 0, 0, 0.10)',
                         }}
                     >
   SaaS to AI
