@@ -36,7 +36,7 @@ const VisionaryTeam = () => {
               Icon={<AiFillCaretRight color="#FF8E24" />}
           />
         </div>
-        <div className="text-[32px] md:text-[40px]">
+        <div className="text-[32px] md:text-[40px] lg:text-[40px]">
           Our <span className="font-extrabold">Visionary</span> Team
         </div>
         <div className="hidden sm:visible">

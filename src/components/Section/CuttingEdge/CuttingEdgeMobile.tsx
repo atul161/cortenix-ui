@@ -35,7 +35,7 @@ const CuttingEdgeMobile: React.FC = () => {
                     viewport={{ once: true, amount: 0.3 }}
                     transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
                 >
-                    <h2 className="text-white font-primary font-semibold text-[20px] sm:text-[28px] leading-tight">
+                    <h2 className="text-white font-primary font-semibold text-[32px] md:text-3xl leading-tight">
                         Powered By <span className="text-primary font-bold">Cutting-Edge</span> Technologies
                     </h2>
                 </motion.div>

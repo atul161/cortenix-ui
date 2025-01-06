@@ -124,7 +124,7 @@ const OurApproach: React.FC = () => {
         <div className="absolute bottom-72 right-0">
           <DotComponent rows={12} columns={7} />
         </div>
-        <h2 className="font-primary font-normal text-[32px] md:text-[40px] mb-12 text-gray-800">
+        <h2 className="font-primary font-normal text-[32px] md:text-[40px] lg:text-[40px] mb-12 text-gray-800">
           Our <span className="font-bold text-blue-600">Approach</span>
         </h2>
 

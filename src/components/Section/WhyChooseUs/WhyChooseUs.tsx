@@ -24,7 +24,7 @@ const WhyChooseUs = () => {
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-start mb-16">
-            <div className="text-4xl">
+            <div className="text-[32px] md:text-[40px] lg:text-[40px]">
               Why Choose <span className="font-extrabold text-blue-600">Us?</span>
             </div>
             <div className="flex md:justify-between justify-center mt-16 flex-wrap">

@@ -34,7 +34,7 @@ const OurClients: React.FC = () => {
                             }}
                         />
                         <motion.h2
-                            className="text-[28px] lg:text-[40px] font-bold text-[#435CFF] font-primary"
+                            className="text-[28px] md:text-[40px] lg:text-[40px] font-bold text-[#435CFF] font-primary"
                             style={{
                                 background: "linear-gradient(90deg, #435CFF 0%, #834EFF 100%)",
                                 WebkitBackgroundClip: "text",

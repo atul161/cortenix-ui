@@ -37,7 +37,7 @@ const CuttingEdge: React.FC = () => {
                                 Icon={<AiFillCaretLeft />}
                             />
                         </div>
-                        <h2 className="text-white font-primary font-normal text-center text-[20px] sm:text-[24px] md:text-[32px] lg:text-[40px] px-4 md:px-0">
+                        <h2 className="text-white font-primary font-normal text-center text-[20px] sm:text-[24px] md:text-[40px] lg:text-[40px] px-4 md:px-0">
                             Powered By <span className="text-primary font-bold">Cutting-Edge</span> Technologies
                         </h2>
                         <div className="flex items-center">
