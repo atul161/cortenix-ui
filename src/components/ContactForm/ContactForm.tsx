@@ -1,6 +1,6 @@
 "use client";
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React, {useState} from "react";
+import {AnimatePresence, motion} from "framer-motion";
 
 const ContactForm = () => {
     const [formData, setFormData] = useState({
@@ -17,7 +17,7 @@ const ContactForm = () => {
     const handleChange = (
         e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
     ) => {
-        const { name, value } = e.target;
+        const {name, value} = e.target;
 
         // Limit subject field to 500 characters
         if (name === "subject" && value.length > 100) {
@@ -29,7 +29,7 @@ const ContactForm = () => {
             return;
         }
 
-        setFormData((prev) => ({ ...prev, [name]: value }));
+        setFormData((prev) => ({...prev, [name]: value}));
     };
 
     const handleSubmit = async (e: React.FormEvent) => {
@@ -151,10 +151,10 @@ const ContactForm = () => {
                 <AnimatePresence>
                     {success && (
                         <motion.div
-                            initial={{ opacity: 0, scale: 0.8 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            exit={{ opacity: 0, scale: 0.8 }}
-                            transition={{ duration: 0.5 }}
+                            initial={{opacity: 0, scale: 0.8}}
+                            animate={{opacity: 1, scale: 1}}
+                            exit={{opacity: 0, scale: 0.8}}
+                            transition={{duration: 0.5}}
                             className="mt-4 p-4 text-green-800 bg-green-100 border border-green-300 rounded-lg"
                         >
                             {success}

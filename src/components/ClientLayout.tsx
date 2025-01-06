@@ -1,14 +1,14 @@
 "use client";
 
-import { motion } from "framer-motion";
+import {motion} from "framer-motion";
 import React from "react";
 
-export default function ClientLayout({ children }: { children: React.ReactNode }) {
+export default function ClientLayout({children}: { children: React.ReactNode }) {
     const isLoading = false;
 
     const simpleAnimation = {
-        hidden: { opacity: 0 },
-        visible: { opacity: 1 },
+        hidden: {opacity: 0},
+        visible: {opacity: 1},
     };
 
     if (isLoading) {
@@ -27,8 +27,8 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
                 initial="hidden"
                 animate="visible"
                 variants={simpleAnimation}
-                transition={{ duration: 1 }}
-                style={{ zIndex: 0 }} // Ensure background is below everything
+                transition={{duration: 1}}
+                style={{zIndex: 0}} // Ensure background is below everything
             ></motion.div>
 
             {/* Main Content Animation */}
@@ -37,7 +37,7 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
                 initial="hidden"
                 animate="visible"
                 variants={simpleAnimation}
-                transition={{ duration: 1 }}
+                transition={{duration: 1}}
             >
                 {children}
             </motion.main>

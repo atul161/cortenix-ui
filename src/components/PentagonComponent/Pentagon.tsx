@@ -1,7 +1,7 @@
 "use client"
 import React from "react";
 
-const Pentagon = ({ label }: { label?: string }) => {
+const Pentagon = ({label}: { label?: string }) => {
     return (
         <div className="relative flex flex-col items-center justify-center">
             {/* Square (Base of the Pentagon) */}
@@ -15,7 +15,8 @@ const Pentagon = ({ label }: { label?: string }) => {
             >
                 {/* Label inside the square */}
                 {label && (
-                    <span className="absolute text-center text-[24px] sm:text-[32px] font-primary font-extrabold text-white">
+                    <span
+                        className="absolute text-center text-[24px] sm:text-[32px] font-primary font-extrabold text-white">
                         {label}
                     </span>
                 )}

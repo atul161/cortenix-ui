@@ -1,5 +1,5 @@
 "use client"
-import React, { ReactNode, useEffect, useState } from "react";
+import React, {ReactNode, useEffect, useState} from "react";
 
 type IconRowProps = {
     count: number; // Default number of icons to display
@@ -19,11 +19,11 @@ const TriangleComponent: React.FC<IconRowProps> = ({
     useEffect(() => {
         const updateCount = () => {
             const screenWidth = window.innerWidth;
-             if (screenWidth > 1024 ) {
+            if (screenWidth > 1024) {
                 setResponsiveCount(count - 1); // Desktop, use the given count
-            } else if (screenWidth <= 1024 && screenWidth >= 800  ) {
-                 setResponsiveCount(2);
-             } else if (screenWidth >= 768) {
+            } else if (screenWidth <= 1024 && screenWidth >= 800) {
+                setResponsiveCount(2);
+            } else if (screenWidth >= 768) {
                 setResponsiveCount(4); // Tablet
             } else {
                 setResponsiveCount(2); // Mobile
@@ -43,7 +43,7 @@ const TriangleComponent: React.FC<IconRowProps> = ({
         <div
             className={`flex flex-row flex-wrap gap-2 p-2 bg-transparent ${containerClassName}`}
         >
-            {Array.from({ length: responsiveCount }, (_, index) => (
+            {Array.from({length: responsiveCount}, (_, index) => (
                 <div
                     key={index}
                     className={`text-white text-2xl sm:text-xl xs:text-lg ${iconClassName}`}

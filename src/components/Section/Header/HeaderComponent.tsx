@@ -1,10 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import {useState} from "react";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
-import { FiMenu, FiX } from "react-icons/fi";
-import { motion, AnimatePresence } from "framer-motion";
+import {usePathname, useRouter} from "next/navigation";
+import {FiMenu, FiX} from "react-icons/fi";
+import {AnimatePresence, motion} from "framer-motion";
 
 export default function HeaderComponent() {
     const [isOpen, setIsOpen] = useState(false);
@@ -13,9 +13,9 @@ export default function HeaderComponent() {
     const router = useRouter();
 
     const menuVariants = {
-        hidden: { opacity: 0, y: -20 },
-        visible: { opacity: 1, y: 0 },
-        exit: { opacity: 0, y: -20 },
+        hidden: {opacity: 0, y: -20},
+        visible: {opacity: 1, y: 0},
+        exit: {opacity: 0, y: -20},
     };
 
     const handleScroll = async (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -30,13 +30,13 @@ export default function HeaderComponent() {
 
                 const element = document.getElementById(id);
                 if (element) {
-                    element.scrollIntoView({ behavior: "smooth" });
+                    element.scrollIntoView({behavior: "smooth"});
                     setIsOpen(false);
                 }
             } else {
                 const element = document.getElementById(id);
                 if (element) {
-                    element.scrollIntoView({ behavior: "smooth" });
+                    element.scrollIntoView({behavior: "smooth"});
                     setIsOpen(false);
                 }
             }
@@ -44,19 +44,20 @@ export default function HeaderComponent() {
     };
 
     const links = [
-        { href: "/#home", label: "Home" },
-        { href: "/#why-us", label: "Why Cortenix" },
-        { href: "/#services", label: "Services" },
-        { href: "/#case-studies", label: "Case Studies" },
-        { href: "/#team", label: "Our Team" },
-        { href: "/contact", label: "Contact Us" },
+        {href: "/#home", label: "Home"},
+        {href: "/#why-us", label: "Why Cortenix"},
+        {href: "/#services", label: "Services"},
+        {href: "/#case-studies", label: "Case Studies"},
+        {href: "/#team", label: "Our Team"},
+        {href: "/contact", label: "Contact Us"},
     ];
 
     return (
         <>
             <header className="bg-white shadow-md sticky top-0 z-50">
                 <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 flex justify-between items-center py-4">
-                    <div className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-[#6DB6FF] to-[#0074E9] text-transparent bg-clip-text font-primary">
+                    <div
+                        className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-[#6DB6FF] to-[#0074E9] text-transparent bg-clip-text font-primary">
                         <Link href="/public">Cortenix</Link>
                     </div>
 
@@ -90,7 +91,7 @@ export default function HeaderComponent() {
                         onClick={() => setIsOpen(!isOpen)}
                         className="lg:hidden text-blue-600 focus:outline-none"
                     >
-                        {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+                        {isOpen ? <FiX size={24}/> : <FiMenu size={24}/>}
                     </button>
                 </div>
 
@@ -102,7 +103,7 @@ export default function HeaderComponent() {
                             animate="visible"
                             exit="exit"
                             variants={menuVariants}
-                            transition={{ duration: 0.3, ease: "easeInOut" }}
+                            transition={{duration: 0.3, ease: "easeInOut"}}
                         >
                             <nav className="flex flex-col items-center space-y-4 py-4">
                                 {links.map((item) => (
@@ -137,10 +138,10 @@ export default function HeaderComponent() {
                 {loading && (
                     <motion.div
                         className="fixed inset-0 bg-blue-600 z-50"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 0.5 }}
+                        initial={{opacity: 0}}
+                        animate={{opacity: 1}}
+                        exit={{opacity: 0}}
+                        transition={{duration: 0.5}}
                     >
                         <div className="flex justify-center items-center h-full">
                             <div className="text-white text-xl">Loading...</div>

@@ -1,11 +1,11 @@
 "use client";
-import { motion } from "framer-motion";
+import {motion} from "framer-motion";
 import Image from "next/image";
 import DotComponent from "@/components/DotComponent/DotComponent";
 import Link from "next/link";
 
 const textContainer = {
-    hidden: { opacity: 0, y: 50 },
+    hidden: {opacity: 0, y: 50},
     visible: {
         opacity: 1,
         y: 0,
@@ -18,19 +18,19 @@ const textContainer = {
 };
 
 const textItem = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+    hidden: {opacity: 0, y: 20},
+    visible: {opacity: 1, y: 0, transition: {duration: 0.8}},
 };
 
 const buttonAnimation = {
-    hidden: { scale: 0.9, opacity: 0 },
-    visible: { scale: 1, opacity: 1, transition: { duration: 1 } },
+    hidden: {scale: 0.9, opacity: 0},
+    visible: {scale: 1, opacity: 1, transition: {duration: 1}},
 };
 
 export default function HeroSection() {
     return (
-        <section className="relative max-h-[620px]" id="home">
-            <div className="w-[100vw] max-h-[620px] h-[620px] flex hero-background-gradient z-10">
+        <section className="relative max-h-[650px]" id="home">
+            <div className="w-[100vw] max-h-[650px] h-[620px] flex hero-background-gradient z-10">
                 <div className="relative w-[60%] h-full flex items-center justify-start z-10 overflow-hidden">
                     <motion.div
                         className="relative text-white pl-32"
@@ -42,8 +42,18 @@ export default function HeroSection() {
                             className="relative text-[52px] lg:text-[52px] font-semibold font-primary mb-6 leading-tight text-shadow-sm text-[#F6F6F6]"
                             variants={textItem}
                         >
-                            From <span className="font-bold text-shadow-lg text-[#FF7729]">SaaS</span> to AI:
-                            <br />
+                            From <span
+                            style={{
+                                fontWeight: 'bold',
+                                background: 'linear-gradient(180deg, #FF8E24 9.09%, #FF7729 49.62%)',
+                                WebkitBackgroundClip: 'text',
+                                color: 'transparent',
+                                textShadow: '3px 3px 0px rgba(0, 0, 0, 0.25)',
+                            }}
+                        >
+  SaaS to AI
+</span>:
+                            <br/>
                             Transforming Enterprises
                         </motion.h1>
                         <motion.p className="text-lg mb-8 pr-6" variants={textItem}>
@@ -55,15 +65,25 @@ export default function HeroSection() {
                         <motion.div variants={buttonAnimation}>
                             <Link href="/contact">
                                 <button
-                                    className="bg-white text-blue-500 font-bold py-3 px-6 shadow-lg hover:bg-gray-200 font-primary text-[28px] border-[#D1DDFF] border-8"
+                                    className="bg-white font-bold py-3 px-6 sm:py-2 sm:px-3 md:py-2 md:px-4 lg:py-3 lg:px-6 xl:py-3 xl:px-6 2xl:py-3 2xl:px-6 shadow-lg hover:bg-gray-200 font-primary text-[28px] border-[#D1DDFF] border-8"
                                 >
-                                    Join The AI Revolution
+  <span
+      style={{
+          background: 'linear-gradient(90deg, #2761FF 0%, #A845FF 100%)',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          display: 'inline-block',
+      }}
+  >
+    Join The AI Revolution
+  </span>
                                 </button>
+
                             </Link>
                         </motion.div>
                     </motion.div>
                     <div className="absolute bottom-3 right-0">
-                        <DotComponent rows={4} columns={5} />
+                        <DotComponent rows={4} columns={5}/>
                     </div>
                     <div
                         className="absolute w-[200px] h-[200px] sm:w-[300px] sm:h-[300px] md:w-[400px] md:h-[400px] -top-[130px] sm:-top-[190px] md:-top-[260px] left-0 z-0 overflow-hidden rotate-45 origin-top-left"
@@ -97,7 +117,7 @@ export default function HeroSection() {
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                 >
-                    <path d="M0 0C0 0 344 83 719 91.5C1094 100 1440 0 1440 0V100H0V0Z" fill="white" />
+                    <path d="M0 0C0 0 344 83 719 91.5C1094 100 1440 0 1440 0V100H0V0Z" fill="white"/>
                 </svg>
             </div>
         </section>

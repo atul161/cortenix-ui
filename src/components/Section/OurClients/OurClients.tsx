@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import { BsGlobeCentralSouthAsia } from "react-icons/bs";
 import Image from "next/image";
@@ -17,7 +17,9 @@ const textReveal = {
 
 const OurClients: React.FC = () => {
     return (
-        <div className="relative w-screen bg-white flex items-center justify-start pl-32 overflow-hidden">
+        <div
+            className="relative w-screen bg-white flex items-center justify-start pl-16 sm:pl-32 md:pl-16 xl:pl-20 2xl:pl-24 overflow-hidden"
+        >
             {/* Header Section */}
             <div className="absolute left-0 bottom-8 top-10 mb-2">
                 <DotComponent rows={22} columns={3} />
@@ -33,9 +35,12 @@ const OurClients: React.FC = () => {
                                 WebkitTextFillColor: "transparent",
                             }}
                         />
+
                         <motion.h2
-                            className="text-[28px] md:text-[40px] lg:text-[40px] font-bold text-[#435CFF] font-primary"
+                            className="text-[28px] md:text-[40px] lg:text-[40px]"
                             style={{
+                                fontWeight: "bold",
+                                fontFamily: "var(--font-primary)",
                                 background: "linear-gradient(90deg, #435CFF 0%, #834EFF 100%)",
                                 WebkitBackgroundClip: "text",
                                 WebkitTextFillColor: "transparent",
@@ -55,7 +60,9 @@ const OurClients: React.FC = () => {
                         whileInView="visible"
                         viewport={{ once: true }}
                     >
-                        Our clients are central to our mission. We believe that your success drives ours, which is why we are committed to delivering exceptional service and high-quality software solutions tailored to your needs.
+                        Our clients are central to our mission. We believe that your success drives ours, which is why
+                        we are committed to delivering exceptional service and high-quality software solutions tailored
+                        to your needs.
                     </motion.p>
 
                     {/* Client Logos Section */}
@@ -68,19 +75,27 @@ const OurClients: React.FC = () => {
                     >
                         {[
                             { src: "/Images/Reddy.png", alt: "Dr. Reddy's" },
-                            {
-                                src: "/Images/IndianGovernment.png",
-                                alt: "Government of India",
-                            },
+                            { src: "/Images/IndianGovernment.png", alt: "Government of India" },
                             { src: "/Images/Eris.jpeg", alt: "Eris" },
                             { src: "/Images/Merck.jpeg", alt: "Merck" },
                         ].map((client, index) => (
                             <motion.div
                                 key={index}
-                                className="bg-white shadow-xl rounded-lg flex items-center justify-center w-40 h-20 lg:w-60 lg:h-28"
-                                whileHover={{ scale: 1.1, rotate: 5 }}
-                                whileTap={{ scale: 0.9 }}
-                                transition={{ type: "spring", stiffness: 300 }}
+                                className="card bg-white rounded-lg flex items-center justify-center w-40 h-20 lg:w-60 lg:h-28 2xl:w-72 2xl:h-32"
+                                style={{
+                                    boxShadow: "0px 4px 24px 0px #D3DAE7BF",
+                                }}
+                                whileHover={{
+                                    y: -10,
+                                }}
+                                whileTap={{
+                                    scale: 0.95,
+                                }}
+                                transition={{
+                                    type: "spring",
+                                    stiffness: 300,
+                                    damping: 15,
+                                }}
                             >
                                 <Image
                                     src={client.src}

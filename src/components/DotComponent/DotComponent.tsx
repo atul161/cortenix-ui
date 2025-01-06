@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
 
 interface DotComponentProps {
     rows: number;
@@ -15,8 +15,8 @@ interface DotComponentProps {
 const DotComponent: React.FC<DotComponentProps> = ({
                                                        rows,
                                                        columns,
-                                                       dotSize = { mobile: 2, tablet: 4, desktop: 6 },
-                                                       gap = { mobile: 2, tablet: 4, desktop: 6 },
+                                                       dotSize = {mobile: 2, tablet: 4, desktop: 6},
+                                                       gap = {mobile: 2, tablet: 4, desktop: 6},
                                                        containerHeight = "auto",
                                                        containerWidth = "auto",
                                                        dotColor = "linear-gradient(112.68deg, #D3DAE7 0%, #D3DAE7 100%)",
@@ -69,7 +69,7 @@ const DotComponent: React.FC<DotComponentProps> = ({
                 alignItems: "center",
             }}
         >
-            {Array.from({ length: rows * columns }).map((_, index) => (
+            {Array.from({length: rows * columns}).map((_, index) => (
                 <div
                     key={index}
                     className="rounded-full"
