@@ -66,7 +66,7 @@ const OurCaseStudies: React.FC = () => {
             variants={parentVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
-            className="relative h-auto w-full bg-[#658FFF] flex items-start justify-center overflow-hidden py-16 pb-20 sm:py-16 sm:pb-24 md:py-16 md:pb-32 lg:py-16 lg:pb-32"
+            className="relative h-auto w-full bg-[#658FFF] flex items-start justify-center overflow-hidden py-16 pb-20 sm:py-16 sm:pb-24 md:py-16 md:pb-32 lg:pb-16  lg:pt-24 lg:pb-40"
         >
             {/* Decorative Background */}
             <div
@@ -84,7 +84,7 @@ const OurCaseStudies: React.FC = () => {
             </div>
 
             {/* Main Content */}
-            <div className="w-[90%] mx-auto h-auto max-h-full flex flex-col items-center justify-center mt-8">
+            <div className="w-[90%] mx-auto h-auto max-h-full flex flex-col items-center justify-center">
                 {/* Title and Description */}
                 <div className="text-center mb-8">
                     <div className="flex items-center justify-center gap-6">
@@ -93,7 +93,7 @@ const OurCaseStudies: React.FC = () => {
                             iconClassName="text-[18px] sm:text-[20px] md:text-[24px] text-white"
                             Icon={<AiFillCaretLeft />}
                         />
-                        <h2 className="text-white font-primary font-medium text-[32px] md:text-3xl">
+                        <h2 className="text-white font-primary font-medium text-[32px] md:text-[40px] lg:text-[40px]">
                             Our <span className="text-primary font-extrabold">Case Studies</span>
                         </h2>
                         <TriangleComponent

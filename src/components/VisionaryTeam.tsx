@@ -25,7 +25,7 @@ const VisionaryTeam = () => {
     ];
 
     return (
-        <div className="flex flex-col items-center md:px-24 md:py-32 sm:py-20 py-16 px-12 relative bg-[#F6F6F6]"
+        <div className="flex flex-col items-center md:px-24 md:py-32 sm:py-20 py-16 px-12 lg:pt-24 relative bg-[#F6F6F6]"
              id="team"
         >
             <div className="flex items-center justify-start sm:text-4xl sm:flex sm:flex-wrap gap-4 sm:gap-10">

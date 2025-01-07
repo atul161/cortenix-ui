@@ -9,7 +9,7 @@ import Link from "next/link";
 const CuttingEdge: React.FC = () => {
     return (
         <motion.div
-            className="relative h-auto w-[100vw] bg-[#658FFF] flex items-center justify-center transition-all duration-500 overflow-hidden"
+            className="relative h-auto w-[100vw] bg-[#658FFF] flex items-center justify-center transition-all duration-500 overflow-hidden lg:pt-24"
             initial={{opacity: 0, scale: 0.9}}
             whileInView={{opacity: 1, scale: 1}}
             viewport={{once: true, amount: 0.3}}
@@ -27,7 +27,7 @@ const CuttingEdge: React.FC = () => {
 
             <div className="w-[90%] mx-auto h-auto max-h-full flex flex-col items-center justify-center">
                 <motion.div
-                    className="pt-16 px-4"
+                    className=" px-4"
                     initial={{opacity: 0, scale: 0.95}}
                     whileInView={{opacity: 1, scale: 1}}
                     viewport={{once: true, amount: 0.3}}
@@ -54,7 +54,7 @@ const CuttingEdge: React.FC = () => {
                     </div>
                 </motion.div>
                 <div className="px-4 flex flex-col">
-                    <div className="flex flex-col items-center justify-between gap-5 mb-8 md:flex-row">
+                    <div className="flex flex-col items-center justify-between gap-5 mb-8 md:flex-row lg:mt-3">
                         <p className="text-center font-normal font-secondary text-[14px] sm:text-[16px] md:text-[18px] text-white sm:text-left">
                             We work with all the major technologies, incorporating
                             <span className="block">
@@ -70,7 +70,7 @@ const CuttingEdge: React.FC = () => {
                     </div>
 
                     <div className="pb-16">
-                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:mt-3">
                             {[
                                 {
                                     title: "Open AI",

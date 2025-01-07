@@ -117,7 +117,7 @@ const OurApproach: React.FC = () => {
 
     return (
         <div
-            className="relative w-screen bg-[#F6F6F6] flex flex-col items-center justify-center overflow-hidden py-16"
+            className="relative w-screen bg-[#F6F6F6] flex flex-col items-center justify-center overflow-hidden py-16 lg:pt-24"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >

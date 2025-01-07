@@ -15,7 +15,7 @@ const WhyChooseUs = () => {
 
     return (
         <motion.div
-            className="py-28 bg-[#EDEDED] relative"
+            className="py-28 lg:pt-24 bg-[#EDEDED] relative"
             id="why-us"
             initial={{opacity: 0, y: 50}}
             whileInView={{opacity: 1, y: 0}}

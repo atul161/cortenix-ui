@@ -29,8 +29,7 @@ const GenAI = () => {
     };
 
     return (
-        <div
-            className="flex lg:py-36 md:py-18 sm:py-20  py-9 lg:px-[100px] md:px-12 px-6 gap-10 flex-col items-center z-10">
+        <div className="flex lg:py-36 lg:pt-24 md:py-18 sm:py-20  py-9 lg:px-[100px] md:px-12 px-6 gap-10 flex-col items-center z-10">
             <div className="text-4xl ">
                 <span
                     className="font-extrabold text-blue-600 font-primary text-[32px] md:text-[40px] lg:text-[40px]  ">GenAI</span> Solutions

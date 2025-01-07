@@ -18,13 +18,13 @@ const textReveal = {
 const OurClients: React.FC = () => {
     return (
         <div
-            className="relative w-screen bg-white flex items-center justify-start pl-16 sm:pl-32 md:pl-16 xl:pl-20 2xl:pl-24 overflow-hidden"
+            className="relative w-screen bg-white flex items-center justify-start pl-16 sm:pl-32 md:pl-16 xl:pl-20 2xl:pl-24 overflow-hidden lg:pt-24"
         >
             {/* Header Section */}
             <div className="absolute left-0 bottom-8 top-10 mb-2">
                 <DotComponent rows={22} columns={3} />
             </div>
-            <div className="w-[100%] lg:w-[95%] max-h-auto flex-col items-start mt-10 lg:mt-20 mb-12">
+            <div className="w-[100%] lg:w-[95%] max-h-auto flex-col items-start mb-12">
                 <div className="flex flex-col ml-20">
                     <div className="flex items-center justify-start gap-4 lg:gap-6 font-primary">
                         <BsGlobeCentralSouthAsia

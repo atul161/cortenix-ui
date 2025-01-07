@@ -7,14 +7,14 @@ import DotComponent from "@/components/DotComponent/DotComponent";
 const HappyCustomer: React.FC = () => {
     return (
         <div
-            className="w-[100vw] h-[110vh] sm:w-[100vw] sm:h-[110vh] bg-gray-200 flex  justify-start items-start sm:flex sm:items-center sm:justify-center">
+            className="w-full bg-gray-200 flex flex-col sm:flex-row justify-start items-start sm:items-center sm:justify-center lg:pt-24 lg:pb-24 md:pb-24">
             {/* Centered container */}
             <div
-                className="h-screen sm:h-[80%] w-[95%] md:w-[90%] flex flex-col md:flex-row items-center justify-center">
+                className="w-full flex flex-col md:flex-row items-center justify-center gap-8">
                 {/* Left Section */}
                 <div
-                    className="h-full w-full md:w-[50%] lg:w-[45%] flex flex-col items-start justify-start p-8 mt-10  sm:p-4 md:p-6">
-                    <div className="font-primary text-[32px] md:text-3xl text-black">
+                    className="w-full md:w-1/2 lg:w-2/5 flex flex-col items-start justify-start p-8 mt-10 sm:p-4 md:p-6">
+                    <div className="font-primary text-[32px] md:text-[40px] lg:text-[40px] text-black">
                         <span className="font-bold text-[#365EFF]">Happy</span> Customers
                     </div>
 
@@ -22,7 +22,7 @@ const HappyCustomer: React.FC = () => {
                         className="relative flex flex-row mt-6 sm:mt-8 md:mt-10 lg:mt-12 w-[300px] sm:w-[350px] md:w-[400px]">
                         {/* Individual Images */}
                         <div
-                            className="w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] border-[4px] sm:border-[6px] border-[#FF8127] rounded-full overflow-hidden">
+                            className="w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] lg:w-[100px] lg:h-[100px] border-[4px] sm:border-[6px] border-[#FF8127] rounded-full overflow-hidden">
                             <Image
                                 src="/Images/HappyCustomer/HappyCustomer.jpeg"
                                 alt="HappyWomenImage"
@@ -62,8 +62,10 @@ const HappyCustomer: React.FC = () => {
                             />
                         </div>
                     </div>
+
+
                     <div
-                        className="flex-col w-full md:w-[95%] bg-white mt-6 sm:mt-8 md:mt-10 px-6 sm:px-8 md:px-10 py-4 sm:py-6">
+                        className="w-full md:w-[95%] bg-white mt-6 sm:mt-8 md:mt-10 px-6 sm:px-8 md:px-10 py-4 lg:pt-4 lg:pb-1 sm:py-6">
                         <div>
                             <p>
                                 Comment: Lorem ipsum odor amet, consectetuer adipiscing elit.
@@ -99,13 +101,16 @@ const HappyCustomer: React.FC = () => {
 
                 {/* Right Section */}
                 <div
-                    className="h-[50%] w-[90%] sm:h-[80%] md:h-[80%] md:mb-28 xl:h-[80%] xl:mb-24 2xl:h-[80%] 2xl:mb-20 md:w-[50%] lg:w-[45%] bg-green-200 flex items-start justify-start relative">
-                    <Image
-                        src="/Images/HappyCustomer/HappyCustomer1.jpeg"
-                        alt="Description"
-                        fill
-                        className="object-cover z-10"
-                    />
+                    className="w-full md:w-1/2 lg:w-2/5 flex items-start justify-start relative">
+                    <div
+                        className="w-[300px] h-[300px] lg:w-[500px] lg:h-[500px] relative hidden sm:block">
+                        <Image
+                            src="/Images/HappyCustomer/HappyCustomer1.jpeg"
+                            alt="Description"
+                            layout="fill"
+                            className="object-cover z-10"
+                        />
+                    </div>
                     <div className="absolute md:-top-16 md:-left-16 -top-2 -left-2">
                         <DotComponent
                             rows={12}
