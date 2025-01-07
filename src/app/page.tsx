@@ -16,7 +16,7 @@ import WhyChooseUs from "@/components/Section/WhyChooseUs/WhyChooseUs";
 import VisionaryTeam from "@/components/VisionaryTeam";
 import Footer from "@/components/Section/Footer/Footer";
 import HappyCustomer from "@/components/Section/HappyCustomers/HappyCustomers";
-// import OurServices from "@/components/Section/OurServices/OurServices";
+import CaseStudies from "@/components/Section/OurCaseStudies/CaseStudies";
 
 export default function Home() {
   const [isClient, setIsClient] = useState(false);
@@ -77,6 +77,7 @@ export default function Home() {
         <VisionaryTeam />
         <HappyCustomer />
         {/*<OurServices />*/}
+        <CaseStudies/>
         <Footer />
       </main>
     </div>

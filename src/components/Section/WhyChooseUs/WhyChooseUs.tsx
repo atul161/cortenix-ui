@@ -32,9 +32,9 @@ const WhyChooseUs = () => {
                             Creating exceptional vertical AI agents requires a unique blend of
                             skills and experience. Here&apos;s why we are your ideal partner:
                         </p>
-                        <Link href="/contact">
+                        <Link href="/contact" className="z-10">
                             <button
-                                className="border-2 border-blue-500 text-blue-500 font-semibold text-lg px-8 py-4 font-primary transition-transform transform hover:scale-105">
+                                className="border-2 border-blue-500 text-blue-500 font-semibold text-lg px-8 py-4 font-primary transition-transform transform hover:scale-105  ">
                                 Speak With Our Experts
                             </button>
                         </Link>
