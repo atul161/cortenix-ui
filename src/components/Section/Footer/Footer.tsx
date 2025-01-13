@@ -21,6 +21,8 @@ const Footer: React.FC = () => {
                     <Link href="#"
                           className="hover:underline text-[14px] transition-transform hover:scale-105 hover:text-white hover:font-semibold text-white">Address</Link>
                     <Link href="#"
+                          className="hover:underline text-[14px] transition-transform hover:scale-105 hover:text-white hover:font-semibold text-white">Term & Conditions</Link>
+                        <Link href="#"
                           className="hover:underline text-[14px] transition-transform hover:scale-105 hover:text-white hover:font-semibold text-white">Privacy
                         Policy</Link>
                     <Link href="#"

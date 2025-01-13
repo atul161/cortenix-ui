@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind pages;
+
+/* Global Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Root Variables */
+:root {
+    --background: #ededed; /* Dark background */
+    --foreground: #ededed; /* Light foreground (text) */
+    --font-primary: 'Comfortaa', sans-serif;
+    --font-secondary: 'Lato', sans-serif;
+    --grid-line-color: rgba(255, 255, 255, 0.05); /* Subtle grid line color */
+    --grid-size: 0.45rem; /* Grid block size */
+}
+
+/* Base Styles */
+body {
+    
+    background-color: white;
+    color: black;
+    position: relative;
+}

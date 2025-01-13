@@ -15,12 +15,12 @@ const VisionaryTeam = () => {
         {
             name: "Mayank Gupta",
             description:
-                "Industry expert and visionary leader with a track record of driving transformative initiatives.",
+                "Co-founder and director with extensive experience in IT sales and enterprise solutions.",
         },
         {
             name: "Apurv Jain",
             description:
-                "Industry expert and visionary leader with a track record of driving transformative initiatives.",
+                "Technology innovator passionate about solving complex challenges through AI.",
         },
     ];
 
