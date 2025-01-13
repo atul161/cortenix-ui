@@ -75,7 +75,7 @@ const ServicesSection = () => {
               {/* Cybersecurity Ellipse */}
               {service.title === 'Cybersecurity' && (
                 <Image
-                  src="/Images/ServicesPhotos/Ellipse4.png"
+                  src="/Images/ServicesPhotos/ellipse4.png"
                   alt="Ellipse for Cybersecurity"
                   width={100}
                   height={100}
@@ -85,7 +85,7 @@ const ServicesSection = () => {
               {/* Full-Stack Development Ellipse */}
               {service.title === 'Full-Stack Development' && (
                 <Image
-                  src="/Images/ServicesPhotos/Ellipse5.png"
+                  src="/Images/ServicesPhotos/ellipse5.png"
                   alt="Ellipse for Full-Stack Development"
                   width={200}
                   height={200}
