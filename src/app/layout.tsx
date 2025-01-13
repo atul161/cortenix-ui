@@ -20,20 +20,20 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-    metadataBase: new URL("https://cortenix.in"),
-    title: "Cortenix - Innovating with AI and Generative AI Solutions",
-    description: "Cortenix specializes in cutting-edge AI and Generative AI technologies to transform businesses and empower innovation.",
+    metadataBase: new URL("https://PeakVelocity.in"),
+    title: "PeakVelocity - Innovating with AI and Generative AI Solutions",
+    description: "PeakVelocity specializes in cutting-edge AI and Generative AI technologies to transform businesses and empower innovation.",
     openGraph: {
-        title: "Cortenix - Innovating with AI and Generative AI Solutions",
-        description: "Cortenix offers state-of-the-art AI and Generative AI services to revolutionize industries and create transformative solutions.",
-        url: "https://cortenix.in",
-        siteName: "Cortenix",
+        title: "PeakVelocity - Innovating with AI and Generative AI Solutions",
+        description: "PeakVelocity offers state-of-the-art AI and Generative AI services to revolutionize industries and create transformative solutions.",
+        url: "https://PeakVelocity.in",
+        siteName: "PeakVelocity",
         images: [
             {
                 url: "/og-image.jpg", // Update with an actual Open Graph image path
                 width: 1200,
                 height: 630,
-                alt: "Cortenix - Innovating with AI and Generative AI Solutions",
+                alt: "PeakVelocity - Innovating with AI and Generative AI Solutions",
             },
         ],
         locale: "en_US",

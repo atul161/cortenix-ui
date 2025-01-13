@@ -61,7 +61,7 @@ export default function HeroSectionMobile() {
                     >
                         Technology is evolving rapidly. Enterprises are moving beyond traditional SaaS to
                         embrace Vertical AI Agents, tailored to solve industry-specific challenges and unlock
-                        growth. At Cortinex, we lead this transformation, empowering businesses to harness
+                        growth. At PeakVelocity, we lead this transformation, empowering businesses to harness
                         AI’s full potential.
                     </motion.p>
                     <motion.div variants={buttonAnimation}>

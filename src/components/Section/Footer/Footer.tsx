@@ -6,7 +6,7 @@ import { FaLinkedin, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 
 const links = [
     {href: "/#home", label: "Home"},
-    {href: "/#why-us", label: "Why Cortenix"},
+    {href: "/#why-us", label: "Why PeakVelocity"},
     {href: "/#services", label: "Services"},
     {href: "/#case-studies", label: "Case Studies"},
     {href: "/#team", label: "Our Team"},
@@ -25,8 +25,8 @@ const Footer: React.FC = () => {
             <div className="hidden md:grid container mx-auto px-4 grid-cols-1 md:grid-cols-3 gap-8">
                 {/* Left Section */}
                 <div>
-                    <h1 className="text-4xl font-bold mb-4 text-white">Cortinex</h1>
-                    <p className="text-sm mt-2">&copy; 2024 Cortinex. All rights reserved.</p>
+                    <h1 className="text-4xl font-bold mb-4 text-white">PeakVelocity</h1>
+                    <p className="text-sm mt-2">&copy; 2024 PeakVelocity. All rights reserved.</p>
                     <div className="flex flex-col mt-4 space-y-2">
                         <Link
                             href="/privacy-policy"
@@ -61,11 +61,11 @@ const Footer: React.FC = () => {
                 <div className="flex flex-col space-y-5">
                     <h3 className="text-lg mb-2 text-white font-bold">Contact Us</h3>
                     <Link
-                        href="mailto:email1@cortinex.com"
+                        href="mailto:email1@PeakVelocity.com"
                         className="flex items-center space-x-3 text-sm hover:underline transition-all duration-300 hover:text-white"
                     >
                         <FaEnvelope className="text-white text-lg" />
-                        <span className="text-white">email1@cortinex.com</span>
+                        <span className="text-white">email1@PeakVelocity.com</span>
                     </Link>
                     <Link
                         href="tel:+91XXXXXXXXXX"
@@ -75,11 +75,11 @@ const Footer: React.FC = () => {
                         <span className="text-white hover:text-white">+91XXXXXXXXXX</span>
                     </Link>
                     <Link
-                        href="mailto:email2@cortinex.com"
+                        href="mailto:email2@PeakVelocity.com"
                         className="text-white flex items-center space-x-3 text-sm hover:underline transition-all duration-300 text-white hover:text-white"
                     >
                         <FaEnvelope className="text-white text-lg" />
-                        <span>email2@cortinex.com</span>
+                        <span>email2@PeakVelocity.com</span>
                     </Link>
                     <Link
                         href="tel:+91XXXXXXXXXX"
@@ -101,8 +101,8 @@ const Footer: React.FC = () => {
             {/* Mobile Layout */}
             <div className="block md:hidden container mx-auto px-4">
                 <div className="text-center mb-6">
-                    <h1 className="text-3xl font-bold mb-4 text-white">Cortinex</h1>
-                    <p className="text-sm">&copy; 2024 Cortinex. All rights reserved.</p>
+                    <h1 className="text-3xl font-bold mb-4 text-white">PeakVelocity</h1>
+                    <p className="text-sm">&copy; 2024 PeakVelocity. All rights reserved.</p>
                 </div>
 
                 <div className="grid grid-cols-1 gap-6">
@@ -125,11 +125,11 @@ const Footer: React.FC = () => {
                         <h3 className="text-lg mb-2 text-center font-bold text-white">Contact Us</h3>
                         <div className="flex flex-col items-center space-y-4">
                             <Link
-                                href="mailto:email1@cortinex.com"
+                                href="mailto:email1@PeakVelocity.com"
                                 className="flex items-center space-x-3 text-sm hover:underline transition-all duration-300 hover:text-white"
                             >
                                 <FaEnvelope className="text-white text-xl" />
-                                <span className="text-white">email1@cortinex.com</span>
+                                <span className="text-white">email1@PeakVelocity.com</span>
                             </Link>
                             <Link
                                 href="tel:+91XXXXXXXXXX"
@@ -139,11 +139,11 @@ const Footer: React.FC = () => {
                                 <span className="text-white">+91XXXXXXXXXX</span>
                             </Link>
                             <Link
-                                href="mailto:email2@cortinex.com"
+                                href="mailto:email2@PeakVelocity.com"
                                 className="flex items-center space-x-3 text-sm hover:underline transition-all duration-300 hover:text-white"
                             >
                                 <FaEnvelope className="text-white text-xl" />
-                                <span className="text-white">email2@cortinex.com</span>
+                                <span className="text-white">email2@PeakVelocity.com</span>
                             </Link>
                             <Link
                                 href="tel:+91XXXXXXXXXX"

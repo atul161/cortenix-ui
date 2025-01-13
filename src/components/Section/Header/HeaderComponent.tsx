@@ -45,7 +45,7 @@ export default function HeaderComponent() {
 
     const links = [
         {href: "/#home", label: "Home"},
-        {href: "/#why-us", label: "Why Cortenix"},
+        {href: "/#why-us", label: "Why PeakVelocity"},
         {href: "/#services", label: "Services"},
         {href: "/#case-studies", label: "Case Studies"},
         {href: "/#team", label: "Our Team"},
@@ -58,7 +58,7 @@ export default function HeaderComponent() {
                 <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 flex justify-between items-center py-4">
                     <div
                         className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-[#6DB6FF] to-[#0074E9] text-transparent bg-clip-text font-primary">
-                        <Link href="/public">Cortenix</Link>
+                        <Link href="/public">PeakVelocity</Link>
                     </div>
 
                     <nav className="hidden lg:flex space-x-4 xl:space-x-6">
