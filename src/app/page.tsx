@@ -18,6 +18,7 @@ import Footer from "@/components/Section/Footer/Footer";
 import HappyCustomer from "@/components/Section/HappyCustomers/HappyCustomers";
 import CaseStudies from "@/components/Section/OurCaseStudies/CaseStudies";
 import ServicesSection from '../components/Services/ServicesSection';
+import ServiceSectionMobile from "@/components/Services/ServiceSectionMobile";
 
 export default function Home() {
   const [isClient, setIsClient] = useState(false);
@@ -79,7 +80,16 @@ export default function Home() {
         <HappyCustomer />
         {/*<OurServices />*/}
         <CaseStudies/>
-        <ServicesSection />
+        {isClient &&
+            (isMobileOrTablet ? (
+                <div id="ServiceSectionMobile" className="relative">
+                  <ServiceSectionMobile/>
+                </div>
+            ) : (
+                <div id="ServiceSection" className="relative">
+                  <ServicesSection/>
+                </div>
+            ))}
         <Footer />
       </main>
     </div>
