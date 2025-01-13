@@ -22,28 +22,28 @@ const servicesData = [
     description:
       'Deliver exceptional user experiences with our innovative UX design services. We combine creativity and functionality to design intuitive interfaces.',
     link: '#',
-    image: '/images/ServicesPhotos/UX Designer.png',
+    image: '/images/ServicesPhotos/UXDesigner.png',
   },
   {
     title: 'Salesforce Services',
     description:
       'Unlock the power of Salesforce with our customized solutions. From implementation to optimization, we help you leverage Salesforce to drive sales.',
     link: '#',
-    image: '/images/ServicesPhotos/Salesforce Services.png',
+    image: '/images/ServicesPhotos/SalesforceServices.png',
   },
   {
     title: 'Full-Stack Development',
     description:
       'Our full-stack developers excel in MERN stack, seamlessly combining MongoDB, Express.js, React, and Node.js to create high-performance web applications.',
     link: '#',
-    image: '/images/ServicesPhotos/Full-Stack Development.png',
+    image: '/images/ServicesPhotos/Full-StackDevelopment.png',
   },
   {
     title: 'Digital Product Development',
     description:
       'From ideation to deployment, we provide end-to-end digital product development services, leveraging the latest technologies to bring your ideas to life.',
     link: '#',
-    image: '/images/ServicesPhotos/Digital Product Development.png',
+    image: '/images/ServicesPhotos/DigitalProductDevelopment.png',
   },
 ];
 
@@ -76,7 +76,7 @@ const ServicesSection = () => {
               {/* Cybersecurity Ellipse */}
               {service.title === 'Cybersecurity' && (
                 <Image
-                  src="/images/ServicesPhotos/Ellipse 4.png"
+                  src="/images/ServicesPhotos/Ellipse4.png"
                   alt="Ellipse for Cybersecurity"
                   className="absolute w-48 h-72 top-4 right-12 transform translate-x-2/4 -translate-y-3/4 opacity-75 z-0"
                 />
@@ -84,7 +84,7 @@ const ServicesSection = () => {
               {/* Full-Stack Development Ellipse */}
               {service.title === 'Full-Stack Development' && (
                 <Image
-                  src="/images/ServicesPhotos/Ellipse 5.png"
+                  src="/images/ServicesPhotos/Ellipse5.png"
                   alt="Ellipse for Full-Stack Development"
                   className="absolute w-48 h-82 bottom-4 left-18 transform -translate-x-2/4 translate-y-2/4 opacity-75 z-0"
                 />
