@@ -103,6 +103,20 @@ const Footer: React.FC = () => {
                 <div className="text-center mb-6">
                     <h1 className="text-3xl font-bold mb-4 text-white">PeakVelocity</h1>
                     <p className="text-sm">&copy; 2024 PeakVelocity. All rights reserved.</p>
+                    <div className="flex flex-col mt-4 space-y-2">
+                        <Link
+                            href="/privacy-policy"
+                            className="hover:underline text-sm text-white transition-all duration-300 hover:text-white"
+                        >
+                            Privacy Policy
+                        </Link>
+                        <Link
+                            href="/terms"
+                            className="hover:underline text-sm text-white transition-all duration-300 hover:text-white"
+                        >
+                            Terms of Service
+                        </Link>
+                    </div>
                 </div>
 
                 <div className="grid grid-cols-1 gap-6">
