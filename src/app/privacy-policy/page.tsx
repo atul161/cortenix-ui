@@ -1,5 +1,5 @@
-//import Footer from "@/components/layout/Footer";
-import "@/styles/terms.css";
+"use client"
+
 
 export default function PrivacyPolicy() {
   return (

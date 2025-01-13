@@ -1,13 +1,12 @@
-//import Footer from "@/components/Section/Footer";
-import "@/styles/terms.css";
+"use client"
 
-export default function TermsAndConditionsPage() {
+export default function TermsAndConditionPage() {
   return (
     <>
       <div className="container mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold mb-4">Terms of Service</h1>
         <p className="text-sm mb-4">Last Updated: [6 Jan 2025]</p>
-        
+
         <p className="mb-4">
           Welcome to PeakVelocity.ai (“PeakVelocity,” “we,” “us,” or “our”). These Terms of Service (“Terms”) govern your use of our platform, products, and IT services (collectively, the “Services”). By accessing or using our Services, you agree to these Terms. If you do not agree, you may not use our Services.
         </p>

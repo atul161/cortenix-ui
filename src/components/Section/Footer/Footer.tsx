@@ -19,13 +19,13 @@ const Footer: React.FC = () => {
                     <p className="text-sm mt-2">&copy; 2024 Cortinex. All rights reserved.</p>
                     <div className="flex flex-col mt-4 space-y-2">
                         <Link
-                            href="#"
+                            href="/privacy-policy"
                             className="hover:underline text-sm text-white transition-all duration-300 hover:text-white"
                         >
                             Privacy Policy
                         </Link>
                         <Link
-                            href="#"
+                            href="/terms"
                             className="hover:underline text-sm text-white transition-all duration-300 hover:text-white"
                         >
                             Terms of Service
