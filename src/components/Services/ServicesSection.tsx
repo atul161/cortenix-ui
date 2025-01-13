@@ -1,5 +1,6 @@
 import React from 'react';
 import ServiceCard from './ServiceCard';
+import Image from "next/image";
 
 const servicesData = [
   {
@@ -7,7 +8,7 @@ const servicesData = [
     description:
       'Revolutionize your industry with tailored AI solutions that address specific challenges, streamline processes, and enhance decision-making.',
     link: '#',
-    image: '/images/ServicesPhotos/AI Vertical Agents.png',
+    image: '/images/ServicesPhotos/AIVerticalAgents.png',
   },
   {
     title: 'Cybersecurity',
@@ -74,7 +75,7 @@ const ServicesSection = () => {
             <div className="relative" key={index}>
               {/* Cybersecurity Ellipse */}
               {service.title === 'Cybersecurity' && (
-                <img
+                <Image
                   src="/images/ServicesPhotos/Ellipse 4.png"
                   alt="Ellipse for Cybersecurity"
                   className="absolute w-48 h-72 top-4 right-12 transform translate-x-2/4 -translate-y-3/4 opacity-75 z-0"
@@ -82,7 +83,7 @@ const ServicesSection = () => {
               )}
               {/* Full-Stack Development Ellipse */}
               {service.title === 'Full-Stack Development' && (
-                <img
+                <Image
                   src="/images/ServicesPhotos/Ellipse 5.png"
                   alt="Ellipse for Full-Stack Development"
                   className="absolute w-48 h-82 bottom-4 left-18 transform -translate-x-2/4 translate-y-2/4 opacity-75 z-0"

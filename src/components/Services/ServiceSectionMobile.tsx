@@ -14,7 +14,7 @@ const servicesData = [
         description:
             'Revolutionize your industry with tailored AI solutions that address specific challenges, streamline processes, and enhance decision-making.',
         link: '#',
-        image: '/images/ServicesPhotos/AI Vertical Agents.png',
+        image: '/images/ServicesPhotos/AIVerticalAgents.png',
     },
     {
         title: 'Cybersecurity',
