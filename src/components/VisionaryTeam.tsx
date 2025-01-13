@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import TriangleComponent from "./TriangleComponent/TriangleComponent";
-import {AiFillCaretLeft, AiFillCaretRight} from "react-icons/ai";
+import {AiFillCaretLeft, AiFillCaretRight, AiFillLinkedin} from "react-icons/ai";
 import DotComponent from "./DotComponent/DotComponent";
 import Image from "next/image"; // Importing Image component
 
@@ -9,16 +9,24 @@ const VisionaryTeam = () => {
     const PERSONS = [
         {
             name: "Vinamra Pandiya",
+            src: "/Images/VP.jpeg",
+            url: "https://abc.com",
             description:
                 "Industry expert and visionary leader with a track record of driving transformative initiatives.",
         },
         {
             name: "Mayank Gupta",
+
+            src: "/Images/Mayank.jpeg",
+            url: "https://abc.com",
             description:
                 "Co-founder and director with extensive experience in IT sales and enterprise solutions.",
         },
         {
             name: "Apurv Jain",
+
+            src: "/Images/Apurv.jpeg",
+            url: "https://abc.com",
             description:
                 "Technology innovator passionate about solving complex challenges through AI.",
         },
@@ -48,7 +56,7 @@ const VisionaryTeam = () => {
                 </div>
             </div>
             <div className="flex mt-32 sm:mt-40 gap-32 sm:gap-32 flex-wrap">
-                {PERSONS.map(({description, name}, index) => (
+                {PERSONS.map(({description, name,src ,url}, index) => (
                     <div
                         key={index} // Adding the unique key for each child
                         className="max-w-sm mx-auto bg-[#EDEDED] rounded-xl shadow-md w-72"
@@ -56,11 +64,11 @@ const VisionaryTeam = () => {
                         <div className="relative">
                             <div className="w-full absolute -top-24 flex justify-center items-center">
                                 <Image
-                                    src="/Images/profile.png" // Replace with the correct path
+                                    src={src} // Replace with the correct path
                                     alt={`${name}'s profile`}
-                                    width={192} // Adjust width based on requirements
-                                    height={192} // Adjust height based on requirements
-                                    className="rounded-full"
+                                    width={160} // Adjust width based on requirements
+                                    height={160} // Adjust height based on requirements
+                                    className="rounded-full object-contain"
                                 />
                             </div>
                             <div className="text-white text-sm px-2 pt-24 rounded-lg">
@@ -69,7 +77,12 @@ const VisionaryTeam = () => {
                         </div>
                         <div className="text-center py-4 px-6">
                             <h2 className="text-xl font-semibold text-purple-600">{name}</h2>
-                            <p className="text-sm text-gray-500 italic">Detail</p>
+                            <div className="mt-4 flex justify-center">
+                                <AiFillLinkedin
+                                    className="text-blue-600 text-2xl cursor-pointer"
+                                    onClick={() => window.open(url, "_blank")}
+                                />
+                            </div>
                             <p className="text-[#00000099] mt-2 text-[14px] sm:text-[16px] md:text-[16px]">{description}</p>
                         </div>
                     </div>
