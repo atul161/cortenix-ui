@@ -1,49 +1,48 @@
 import React from 'react';
 import ServiceCard from './ServiceCard';
 import Image from "next/image";
-
 const servicesData = [
   {
     title: 'AI Vertical Agents',
     description:
-      'Revolutionize your industry with tailored AI solutions that address specific challenges, streamline processes, and enhance decision-making.',
+        'Revolutionize your industry with tailored AI solutions that address specific challenges, streamline processes, and enhance decision-making.',
     link: '#',
-    image: '/images/ServicesPhotos/AIVerticalAgents.png',
+    image: '/images/ServicesPhotos/ai-vertical.png',
   },
   {
     title: 'Cybersecurity',
     description:
-      'Secure your enterprise with cutting-edge cybersecurity services. From threat detection to vulnerability management, we protect your digital assets.',
+        'Secure your enterprise with cutting-edge cybersecurity services. From threat detection to vulnerability management, we protect your digital assets.',
     link: '#',
-    image: '/images/ServicesPhotos/Cybersecurity.png',
+    image: '/images/ServicesPhotos/cyber-security.png',
   },
   {
     title: 'UX Design',
     description:
-      'Deliver exceptional user experiences with our innovative UX design services. We combine creativity and functionality to design intuitive interfaces.',
+        'Deliver exceptional user experiences with our innovative UX design services. We combine creativity and functionality to design intuitive interfaces.',
     link: '#',
-    image: '/images/ServicesPhotos/UXDesigner.png',
+    image: '/images/ServicesPhotos/ux-designer.png',
   },
   {
     title: 'Salesforce Services',
     description:
-      'Unlock the power of Salesforce with our customized solutions. From implementation to optimization, we help you leverage Salesforce to drive sales.',
+        'Unlock the power of Salesforce with our customized solutions. From implementation to optimization, we help you leverage Salesforce to drive sales.',
     link: '#',
-    image: '/images/ServicesPhotos/SalesforceServices.png',
+    image: '/images/ServicesPhotos/salesforce-services.png',
   },
   {
     title: 'Full-Stack Development',
     description:
-      'Our full-stack developers excel in MERN stack, seamlessly combining MongoDB, Express.js, React, and Node.js to create high-performance web applications.',
+        'Our full-stack developers excel in MERN stack, seamlessly combining MongoDB, Express.js, React, and Node.js to create high-performance web applications.',
     link: '#',
-    image: '/images/ServicesPhotos/Full-StackDevelopment.png',
+    image: '/images/ServicesPhotos/full-stack-development.png',
   },
   {
     title: 'Digital Product Development',
     description:
-      'From ideation to deployment, we provide end-to-end digital product development services, leveraging the latest technologies to bring your ideas to life.',
+        'From ideation to deployment, we provide end-to-end digital product development services, leveraging the latest technologies to bring your ideas to life.',
     link: '#',
-    image: '/images/ServicesPhotos/DigitalProductDevelopment.png',
+    image: '/images/ServicesPhotos/digital-product-development.png',
   },
 ];
 
@@ -78,6 +77,8 @@ const ServicesSection = () => {
                 <Image
                   src="/images/ServicesPhotos/Ellipse4.png"
                   alt="Ellipse for Cybersecurity"
+                  width={100}
+                  height={100}
                   className="absolute w-48 h-72 top-4 right-12 transform translate-x-2/4 -translate-y-3/4 opacity-75 z-0"
                 />
               )}
@@ -86,6 +87,8 @@ const ServicesSection = () => {
                 <Image
                   src="/images/ServicesPhotos/Ellipse5.png"
                   alt="Ellipse for Full-Stack Development"
+                  width={200}
+                  height={200}
                   className="absolute w-48 h-82 bottom-4 left-18 transform -translate-x-2/4 translate-y-2/4 opacity-75 z-0"
                 />
               )}
