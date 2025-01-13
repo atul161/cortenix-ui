@@ -28,28 +28,28 @@ const servicesData = [
         description:
             'Deliver exceptional user experiences with our innovative UX design services. We combine creativity and functionality to design intuitive interfaces.',
         link: '#',
-        image: '/images/ServicesPhotos/UX Designer.png',
+        image: '/images/ServicesPhotos/UXDesigner.png',
     },
     {
         title: 'Salesforce Services',
         description:
             'Unlock the power of Salesforce with our customized solutions. From implementation to optimization, we help you leverage Salesforce to drive sales.',
         link: '#',
-        image: '/images/ServicesPhotos/Salesforce Services.png',
+        image: '/images/ServicesPhotos/SalesforceServices.png',
     },
     {
         title: 'Full-Stack Development',
         description:
             'Our full-stack developers excel in MERN stack, seamlessly combining MongoDB, Express.js, React, and Node.js to create high-performance web applications.',
         link: '#',
-        image: '/images/ServicesPhotos/Full-Stack Development.png',
+        image: '/images/ServicesPhotos/Full-StackDevelopment.png',
     },
     {
         title: 'Digital Product Development',
         description:
             'From ideation to deployment, we provide end-to-end digital product development services, leveraging the latest technologies to bring your ideas to life.',
         link: '#',
-        image: '/images/ServicesPhotos/Digital Product Development.png',
+        image: '/images/ServicesPhotos/DigitalProductDevelopment.png',
     },
 ];
 const ServiceSectionMobile: React.FC = () => {
