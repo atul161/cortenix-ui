@@ -9,16 +9,16 @@ const VisionaryTeam = () => {
     const PERSONS = [
         {
             name: "Vinamra Pandiya",
-            src: "/Images/VP.jpeg",
-            url: "https://abc.com",
+            src: "/Images/VP_Pic.jpeg",
+            url: "https://www.linkedin.com/in/vinamrapandiya/",
             description:
                 "Industry expert and visionary leader with a track record of driving transformative initiatives.",
         },
         {
             name: "Mayank Gupta",
 
-            src: "/Images/Mayank.jpeg",
-            url: "https://abc.com",
+            src: "/Images/Mayank_Gupta1.jpeg",
+            url: "https://www.linkedin.com/in/gmayank/",
             description:
                 "Co-founder and director with extensive experience in IT sales and enterprise solutions.",
         },
@@ -26,7 +26,7 @@ const VisionaryTeam = () => {
             name: "Apurv Jain",
 
             src: "/Images/Apurv.jpeg",
-            url: "https://abc.com",
+            url: " https://www.linkedin.com/in/apurvjain93/",
             description:
                 "Technology innovator passionate about solving complex challenges through AI.",
         },
