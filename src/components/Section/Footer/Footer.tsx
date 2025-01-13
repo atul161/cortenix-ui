@@ -3,6 +3,16 @@ import React from "react";
 import Link from "next/link";
 import { FaLinkedin, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 
+
+const links = [
+    {href: "/#home", label: "Home"},
+    {href: "/#why-us", label: "Why Cortenix"},
+    {href: "/#services", label: "Services"},
+    {href: "/#case-studies", label: "Case Studies"},
+    {href: "/#team", label: "Our Team"},
+    {href: "/contact", label: "Contact Us"},
+];
+
 const Footer: React.FC = () => {
     return (
         <footer
@@ -36,13 +46,13 @@ const Footer: React.FC = () => {
                 {/* Explore Section */}
                 <div className="flex flex-col space-y-3">
                     <h3 className="text-lg font-semibold mb-2 text-white">Explore</h3>
-                    {["Home", "Why Cortinex", "Our Team", "Case Studies", "Services"].map((item) => (
+                    {links.map((item) => (
                         <Link
-                            key={item}
-                            href="#"
+                            key={item.label}
+                            href={item.href}
                             className="hover:underline text-sm flex items-center text-white transition-all duration-300 hover:text-white"
                         >
-                            {item}
+                            {item.label}
                         </Link>
                     ))}
                 </div>
@@ -99,13 +109,13 @@ const Footer: React.FC = () => {
                     <div>
                         <h3 className="text-lg font-semibold mb-2 text-center text-white">Explore</h3>
                         <div className="flex flex-wrap justify-center space-x-4">
-                            {["Home", "Why Cortinex", "Our Team", "Case Studies", "Services"].map((item) => (
+                            {links.map((item) => (
                                 <Link
-                                    key={item}
-                                    href="#"
+                                    key={item.label}
+                                    href={item.href}
                                     className="hover:underline text-sm text-white transition-all duration-300 hover:text-white"
                                 >
-                                    {item}
+                                    {item.label}
                                 </Link>
                             ))}
                         </div>
